@@ -27,6 +27,7 @@ import HomeScreen from '../layouts/HomeScreen';
 import ArticlesScreen from '../layouts/ArticlesScreen';
 import CatalogScreen from '../layouts/CatalogScreen';
 import SettingsScreen from '../layouts/SettingsScreen';
+import ThemePickerScreen from '../layouts/settings/ThemePickerScreen'
 
 import AppConstants from '../AppConstants';
 
@@ -109,6 +110,7 @@ CatalogStack.navigationOptions = {
 /////////////////////////////////////////
 const SettingsStack = createStackNavigator({
     Settings: SettingsScreen,
+    ThemePicker: ThemePickerScreen
 });
 SettingsStack.path = '';
 SettingsStack.navigationOptions = {
@@ -158,4 +160,4 @@ const coreComponent = createBottomTabNavigator(
 coreComponent.path = '';
 
 
-export default coreComponent;
+export default export default createAppContainer(coreComponent);

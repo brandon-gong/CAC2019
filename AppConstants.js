@@ -27,36 +27,52 @@
  * @author Brandon Gong
  * @date 10-6-19
  */
-export default {
+import * as FileSystem from 'expo-file-system';
 
-    // I find the app kind of lags if lazy rendering is turned on and I also
-    // doubt turning it off will drain too much battery life because its a
-    // pretty simple app.
-    lazyRendering: false,
+let backgroundColor = "";
 
-    // Tab bar styles
-    tabIconSize: 20,
-    tabIconMarginBottom: -5,
-    tabIconColorInactive: '#ccc',
-    tabIconColorActive: '#2f95dc',
-    tabHomeLabel: 'Home',
-    tabHomeIconName: 'home', // Drawing from the `feather` icon set.
-    tabArticlesLabel: 'Articles',
-    tabArticlesIconName: 'file-text',
-    tabCatalogLabel: 'Catalog',
-    tabCatalogIconName: 'layers',
-    tabSettingsLabel: 'Settings',
-    tabSettingsIconName: 'settings',
-    tabFontSize: 10,
-    tabFontMarginBottom: 5,
-    tabFontStyle: 'normal', // either 'italics' or 'normal'
-    tabFontFamily: 'sans-regular',
-    tabBarColor: 'black', // TODO change
-    tabBarBorderTopColor: 'transparent',
-    tabBarBorderTopWidth: 0,
-    tabBarHeight: 50,
+export function init() {
 
-    h1FontFamily: 'serif-regular',
-    pFontFamily: 'sans-light',
+}
 
-};
+export function getBackgroundColor() {
+    return backgroundColor;
+}
+
+// export default {
+//
+//     // I find the app kind of lags if lazy rendering is turned on and I also
+//     // doubt turning it off will drain too much battery life because its a
+//     // pretty simple app.
+    // lazyRendering: false,
+    //
+    // // Tab bar styles
+    // tabIconSize: 20,
+    // tabIconMarginBottom: -5,
+    // tabIconColorInactive: '#ccc',
+    // tabIconColorActive: '#2f95dc',
+    // tabHomeLabel: thl,
+    // tabHomeIconName: 'home', // Drawing from the `feather` icon set.
+    // tabArticlesLabel: 'Articles',
+    // tabArticlesIconName: 'file-text',
+    // tabCatalogLabel: 'Catalog',
+    // tabCatalogIconName: 'layers',
+    // tabSettingsLabel: 'Settings',
+    // tabSettingsIconName: 'settings',
+    // tabFontSize: 10,
+    // tabFontMarginBottom: 5,
+    // tabFontStyle: 'normal', // either 'italics' or 'normal'
+    // tabFontFamily: 'sans-regular',
+    // tabBarColor: 'black', // TODO change
+    // tabBarBorderTopColor: 'transparent',
+    // tabBarBorderTopWidth: 0,
+    // tabBarHeight: 50,
+    //
+    // h1FontFamily: 'serif-regular',
+    // pFontFamily: 'sans-light',
+    // empFontFamily: 'sans-bold'
+// };
+
+export function setTHL(x) {
+    thl = x;
+}

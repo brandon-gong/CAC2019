@@ -25,14 +25,15 @@ import {
     Text
 } from 'react-native';
 import Constants from 'expo-constants'
+import CameraExample from './CameraExample'
 import AppConstants from '../AppConstants'
 
-export default function CatalogScreen() {
-    return (
-        <ScrollView style={styles.container}>
-            <Text>Catalog layout and content here</Text>
-        </ScrollView>
-    );
+class CatalogScreen extends React.Component {
+    render() {
+        return (
+            <CameraExample />
+        );
+    }
 }
 
 CatalogScreen.navigationOptions = {
@@ -47,3 +48,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+export default CatalogScreen;

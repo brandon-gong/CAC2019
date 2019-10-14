@@ -24,11 +24,48 @@ import * as Font from 'expo-font';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+import * as FileSystem from 'expo-file-system';
+import { Alert } from 'react-native';
 
-import ControlEntry from './controllers/ControlEntry';
+import ControlEntry from './controllers/Controller';
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
+
+  state = {
+
+      bgColor: "",
+      fgPrimaryColor: "",
+      fgAccentColor: "",
+
+      lazyRendering: false,
+
+      // Tab bar styles
+      tabIconSize: 20,
+      tabIconMarginBottom: -5,
+      tabIconColorInactive: '#ccc',
+      tabIconColorActive: '#2f95dc',
+      tabHomeLabel: "Home",
+      tabHomeIconName: 'home', // Drawing from the `feather` icon set.
+      tabArticlesLabel: 'Articles',
+      tabArticlesIconName: 'file-text',
+      tabCatalogLabel: 'Catalog',
+      tabCatalogIconName: 'layers',
+      tabSettingsLabel: 'Settings',
+      tabSettingsIconName: 'settings',
+      tabFontSize: 10,
+      tabFontMarginBottom: 5,
+      tabFontStyle: 'normal', // either 'italics' or 'normal'
+      tabFontFamily: 'sans-regular',
+      tabBarColor: 'black', // TODO change
+      tabBarBorderTopColor: 'transparent',
+      tabBarBorderTopWidth: 0,
+      tabBarHeight: 50,
+
+      h1FontFamily: 'serif-regular',
+      pFontFamily: 'sans-light',
+      empFontFamily: 'sans-bold'
+  };
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return (
@@ -41,7 +78,7 @@ export default function App(props) {
   } else {
     return (
       <View style={styles.container}>
-        <ControlEntry />
+        <Controller globalState=this.state setState={ p => this.setState(p) }/>
       </View>
     );
   }
@@ -56,10 +93,30 @@ async function loadResourcesAsync() {
     Font.loadAsync({
       ...Feather.font,
       'sans-regular': require('./assets/fonts/SourceSansPro-Regular.otf'),
+      'sans-bold': require('./assets/fonts/SourceSansPro-Semibold.otf'),
       'sans-light': require('./assets/fonts/SourceSansPro-Light.otf'),
       'serif-regular': require('./assets/fonts/SourceSerifPro-Regular.otf'),
     }),
   ]);
+  FileSystem.getInfoAsync(FileSystem.documentDirectory + "config", {})
+            .then(({ exists }) => {
+                if(!exists) {
+                    // TODO maybe create a tutorial or welcome slides for first-timers
+                    FileSystem.writeAsStringAsync(
+                        FileSystem.documentDirectory + "config",
+                        "\ndg\n", {}
+                    );
+                }
+            });
+  FileSystem.readAsStringAsync(FileSystem.documentDirectory + "config", {})
+            .then((contents) => {
+                if(contents.split("\n")[1] === "dg") {
+                    console.log("here");
+                    this.setState({bgColor: "green"});
+                } else {
+                    this.setState({bgColor: "white"});
+                }
+            });
 }
 
 function handleFinishLoading(setLoadingComplete) {

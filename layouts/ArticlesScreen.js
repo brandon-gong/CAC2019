@@ -27,12 +27,14 @@ import {
 import Constants from 'expo-constants'
 import AppConstants from '../AppConstants'
 
-export default function ArticlesScreen() {
-    return (
-        <ScrollView style={styles.container}>
-            <Text>Articles layout and content here</Text>
-        </ScrollView>
-    );
+class ArticlesScreen extends React.Component {
+    render() {
+        return (
+            <ScrollView style={styles.container}>
+                <Text>Articles layout and content here</Text>
+                </ScrollView>
+        );
+    }
 }
 
 ArticlesScreen.navigationOptions = {
@@ -47,3 +49,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+export default ArticlesScreen;
