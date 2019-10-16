@@ -23,18 +23,14 @@ import { Platform } from 'react-native';
 import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 import { Feather as Icon } from '@expo/vector-icons';
 
+import GlobalData from '../GlobalData'
+
 import HomeScreen from '../layouts/HomeScreen';
 import ArticlesScreen from '../layouts/ArticlesScreen';
 import CatalogScreen from '../layouts/CatalogScreen';
 import SettingsScreen from '../layouts/SettingsScreen';
-import ThemePickerScreen from '../layouts/settings/ThemePickerScreen'
-
-import AppConstants from '../AppConstants';
-
-
-// Home, Articles, Catalog, and Settings are all StackNavigators; we then group
-// all of them into the one TabNavigator.
-
+import LicensesScreen from '../layouts/settings/LicensesScreen'
+import AboutScreen from '../layouts/settings/AboutScreen'
 
 /////////////////////////////////////////
 //               HOME                  //
@@ -44,15 +40,15 @@ const HomeStack = createStackNavigator({
 });
 HomeStack.path = '';
 HomeStack.navigationOptions = {
-    tabBarLabel: AppConstants.tabHomeLabel,
+    tabBarLabel: GlobalData.getInstance()._tabHomeLabel,
     tabBarIcon: ({ focused }) => (
         <Icon
-            name={ AppConstants.tabHomeIconName }
-            size={ AppConstants.tabIconSize }
-            style={{ marginBottom: AppConstants.tabIconMarginBottom }}
+            name={ GlobalData.getInstance()._tabHomeIconName }
+            size={ GlobalData.getInstance()._tabIconSize }
+            style={{ marginBottom: GlobalData.getInstance()._tabIconMarginBottom }}
             color={ focused
-                ? AppConstants.tabIconColorActive
-                : AppConstants.tabIconColorInactive
+                ? GlobalData.getInstance()._tabIconColorActive
+                : GlobalData.getInstance()._tabIconColorInactive
             }
         />
     )
@@ -67,15 +63,15 @@ const ArticlesStack = createStackNavigator({
 });
 ArticlesStack.path = '';
 ArticlesStack.navigationOptions = {
-    tabBarLabel: AppConstants.tabArticlesLabel,
+    tabBarLabel: GlobalData.getInstance()._tabArticlesLabel,
     tabBarIcon: ({focused}) => (
         <Icon
-            name={ AppConstants.tabArticlesIconName }
-            size={ AppConstants.tabIconSize }
-            style={{ marginBottom: AppConstants.tabIconMarginBottom }}
+            name={ GlobalData.getInstance()._tabArticlesIconName }
+            size={ GlobalData.getInstance()._tabIconSize }
+            style={{ marginBottom: GlobalData.getInstance()._tabIconMarginBottom }}
             color={ focused
-                ? AppConstants.tabIconColorActive
-                : AppConstants.tabIconColorInactive
+                ? GlobalData.getInstance()._tabIconColorActive
+                : GlobalData.getInstance()._tabIconColorInactive
             }
         />
     )
@@ -90,15 +86,15 @@ const CatalogStack = createStackNavigator({
 });
 CatalogStack.path = '';
 CatalogStack.navigationOptions = {
-    tabBarLabel: AppConstants.tabCatalogLabel,
+    tabBarLabel: GlobalData.getInstance()._tabCatalogLabel,
     tabBarIcon: ({focused}) => (
         <Icon
-            name={ AppConstants.tabCatalogIconName }
-            size={ AppConstants.tabIconSize }
-            style={{ marginBottom: AppConstants.tabIconMarginBottom }}
+            name={ GlobalData.getInstance()._tabCatalogIconName }
+            size={ GlobalData.getInstance()._tabIconSize }
+            style={{ marginBottom: GlobalData.getInstance()._tabIconMarginBottom }}
             color={ focused
-                ? AppConstants.tabIconColorActive
-                : AppConstants.tabIconColorInactive
+                ? GlobalData.getInstance()._tabIconColorActive
+                : GlobalData.getInstance()._tabIconColorInactive
             }
         />
     )
@@ -110,19 +106,20 @@ CatalogStack.navigationOptions = {
 /////////////////////////////////////////
 const SettingsStack = createStackNavigator({
     Settings: SettingsScreen,
-    ThemePicker: ThemePickerScreen
+    Licenses: LicensesScreen,
+    About: AboutScreen
 });
 SettingsStack.path = '';
 SettingsStack.navigationOptions = {
-    tabBarLabel: AppConstants.tabSettingsLabel,
+    tabBarLabel: GlobalData.getInstance()._tabSettingsLabel,
     tabBarIcon: ({focused}) => (
         <Icon
-            name={ AppConstants.tabSettingsIconName }
-            size={ AppConstants.tabIconSize }
-            style={{ marginBottom: AppConstants.tabIconMarginBottom }}
+            name={ GlobalData.getInstance()._tabSettingsIconName }
+            size={ GlobalData.getInstance()._tabIconSize }
+            style={{ marginBottom: GlobalData.getInstance()._tabIconMarginBottom }}
             color={ focused
-                ? AppConstants.tabIconColorActive
-                : AppConstants.tabIconColorInactive
+                ? GlobalData.getInstance()._tabIconColorActive
+                : GlobalData.getInstance()._tabIconColorInactive
             }
         />
     )
@@ -140,24 +137,25 @@ const coreComponent = createBottomTabNavigator(
         SettingsStack
     },
     {
-        lazy: AppConstants.lazyRendering,
+        lazy: GlobalData.getInstance()._lazyRendering,
         tabBarOptions: {
             labelStyle: {
-                fontSize: AppConstants.tabFontSize,
-                marginBottom: AppConstants.tabFontMarginBottom,
-                fontStyle: AppConstants.tabFontStyle,
-                fontFamily: AppConstants.tabFontFamily,
+                fontSize: GlobalData.getInstance()._tabFontSize,
+                marginBottom: GlobalData.getInstance()._tabFontMarginBottom,
+                fontStyle: GlobalData.getInstance()._tabFontStyle,
+                fontFamily: GlobalData.getInstance()._tabFontFamily,
             },
             style: {
-                backgroundColor: AppConstants.tabBarColor,
-                borderTopColor: AppConstants.tabBarBorderTopColor,
-                borderTopWidth: AppConstants.tabBarBorderTopWidth,
-                height: AppConstants.tabBarHeight,
-            }
+                backgroundColor: GlobalData.getInstance()._fgAccentColor,
+                borderTopColor: GlobalData.getInstance()._tabBarBorderTopColor,
+                borderTopWidth: GlobalData.getInstance()._tabBarBorderTopWidth,
+                height: GlobalData.getInstance()._tabBarHeight,
+            },
+            activeTintColor: GlobalData.getInstance()._tabIconColorActive,
+            inactiveTintColor: GlobalData.getInstance()._tabIconColorInactive,
         }
     }
 );
 coreComponent.path = '';
 
-
-export default export default createAppContainer(coreComponent);
+export default coreComponent;

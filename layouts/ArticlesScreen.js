@@ -25,7 +25,7 @@ import {
     Text
 } from 'react-native';
 import Constants from 'expo-constants'
-import AppConstants from '../AppConstants'
+import GlobalData from '../GlobalData'
 
 class ArticlesScreen extends React.Component {
     render() {

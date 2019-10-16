@@ -24,19 +24,20 @@ import {
     StyleSheet,
     Text
 } from 'react-native';
-import Constants from 'expo-constants'
-import * as AppConstants from '../AppConstants'
+import Constants from 'expo-constants';
+import GlobalData from '../GlobalData'
 
 class HomeScreen extends React.Component {
+
     render() {
         return (
-            <ScrollView style={styles.container}>
-                <Text style={styles.header}>Home Layout & Content Here</Text>
-                <Text style={styles.bodyText}>
+            <ScrollView style={this.styles.container}>
+                <Text style={this.styles.header}>Home Layout & Content Here</Text>
+                <Text style={this.styles.bodyText}>
                     This is a font text.
-                    Header font is {AppConstants.h1FontFamily};
-                    body font is {AppConstants.pFontFamily}.
-                    Tab bar font is {AppConstants.tabFontFamily}.
+                    Header font is {GlobalData.getInstance()._h1FontFamily};
+                    body font is {GlobalData.getInstance()._pFontFamily}.
+                    Tab bar font is {GlobalData.getInstance()._tabFontFamily}.
                     {"\n\n"}
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -89,31 +90,30 @@ class HomeScreen extends React.Component {
             </ScrollView>
         );
     }
+    styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        paddingTop: Constants.statusBarHeight + 20,
+        backgroundColor: GlobalData.getInstance()._bgColor,
+        paddingLeft: 20,
+        paddingRight: 20,
+      },
+      header: {
+          fontFamily: GlobalData.getInstance()._h1FontFamily,
+          fontSize: 40,
+      },
+      bodyText: {
+          fontFamily: GlobalData.getInstance()._pFontFamily,
+          fontSize: 17,
+          marginTop: 20,
+          marginBottom: 70, // IMPORTANT otherwise content gets obscured
+      }
+    });
 }
 
 HomeScreen.navigationOptions = {
   title: 'Home',
   header: null,
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: Constants.statusBarHeight + 20,
-    backgroundColor: AppConstants.getBackgroundColor(),
-    paddingLeft: 20,
-    paddingRight: 20,
-  },
-  header: {
-      fontFamily: AppConstants.h1FontFamily,
-      fontSize: 40,
-  },
-  bodyText: {
-      fontFamily: AppConstants.pFontFamily,
-      fontSize: 17,
-      marginTop: 20,
-      marginBottom: 70, // IMPORTANT otherwise content gets obscured
-  }
-});
 
 export default HomeScreen;
