@@ -26,7 +26,7 @@ import {
 } from 'react-native';
 import Constants from 'expo-constants'
 import CameraExample from './CameraExample'
-import GlobalData from '../GlobalData'
+import GlobalData from '../data/GlobalData'
 
 class CatalogScreen extends React.Component {
     render() {

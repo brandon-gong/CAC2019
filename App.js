@@ -28,7 +28,7 @@ import * as FileSystem from 'expo-file-system';
 import { Alert } from 'react-native';
 
 import ControlEntry from './controllers/ControlEntry';
-import ConfigStorage from './ConfigStorage'
+import ConfigStorage from './data/ConfigStorage'
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);

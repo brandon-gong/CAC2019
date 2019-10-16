@@ -31,7 +31,7 @@ import {
 import { StackActions } from 'react-navigation';
 import Constants from 'expo-constants'
 import { Feather as Icon } from '@expo/vector-icons';
-import GlobalData from '../../GlobalData'
+import GlobalData from '../../data/GlobalData'
 
 class AboutScreen extends React.Component {
 

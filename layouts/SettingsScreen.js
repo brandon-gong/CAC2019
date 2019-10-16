@@ -32,8 +32,8 @@ import {
 } from 'react-native';
 import { Feather as Icon } from '@expo/vector-icons';
 import Constants from 'expo-constants'
-import GlobalData from '../GlobalData'
-import ConfigStorage from '../ConfigStorage'
+import GlobalData from '../data/GlobalData'
+import ConfigStorage from '../data/ConfigStorage'
 
 class SettingsScreen extends React.Component {
 

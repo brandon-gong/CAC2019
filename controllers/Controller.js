@@ -23,7 +23,7 @@ import { Platform } from 'react-native';
 import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 import { Feather as Icon } from '@expo/vector-icons';
 
-import GlobalData from '../GlobalData'
+import GlobalData from '../data/GlobalData'
 
 import HomeScreen from '../layouts/HomeScreen';
 import ArticlesScreen from '../layouts/ArticlesScreen';
