@@ -26,8 +26,16 @@ import { Feather as Icon } from '@expo/vector-icons';
 import GlobalData from '../data/GlobalData'
 
 import HomeScreen from '../layouts/HomeScreen';
+
 import ArticlesScreen from '../layouts/ArticlesScreen';
+import Article1Screen from '../layouts/articles/Article1Screen'
+import Article2Screen from '../layouts/articles/Article2Screen'
+import Article3Screen from '../layouts/articles/Article3Screen'
+import Article4Screen from '../layouts/articles/Article4Screen'
+import Article5Screen from '../layouts/articles/Article5Screen'
+
 import CatalogScreen from '../layouts/CatalogScreen';
+
 import SettingsScreen from '../layouts/SettingsScreen';
 import LicensesScreen from '../layouts/settings/LicensesScreen'
 import AboutScreen from '../layouts/settings/AboutScreen'
@@ -60,6 +68,11 @@ HomeStack.navigationOptions = {
 /////////////////////////////////////////
 const ArticlesStack = createStackNavigator({
     Articles: ArticlesScreen,
+    Article1: Article1Screen,
+    Article2: Article2Screen,
+    Article3: Article3Screen,
+    Article4: Article4Screen,
+    Article5: Article5Screen
 });
 ArticlesStack.path = '';
 ArticlesStack.navigationOptions = {
