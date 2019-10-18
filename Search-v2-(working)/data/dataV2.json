@@ -1,0 +1,48 @@
+[
+//Apple Cores
+{ "name": "Apple Cores",
+  "id": 0,
+  "type": "g",
+  "keywords": [
+    "apple",
+    "core",
+    "fruit",
+    "red",
+    "gala"
+  ],
+  "tips": null
+},
+//Banana Peels
+{ "name": "Banana Peels",
+  "id": 1,
+  "type": "g",
+  "keywords": [
+    "banana",
+    "peel",
+    "yellow",
+    "fruit"],
+  "tips": null
+},
+//Citrus Rinds
+{ "name": "Citrus Rinds",
+  "id": 2,
+  "type": "g",
+  "keywords": [
+    "orange",
+    "lemon",
+    "lime",
+    "zest",
+    "fruit"],
+  "tips": null
+},
+//Fruit Leaves
+{ "name": "Fruit Leaves",
+  "type": "g",
+  "keywords": [
+    "leaf",
+    "leaves",
+    "green",
+    "plant",
+    "stem"],
+    "tips": null}
+] //end array
