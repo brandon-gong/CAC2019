@@ -1,0 +1,44 @@
+var compmat = [{
+  item: "Apple Cores",
+  id: 0,
+  //what is type?
+  keywords: [
+    "apple",
+    "core",
+    "fruit",
+    "red",
+    "gala"]}, {
+
+  item: "Banana Peels",
+  id: 1,
+  keywords: [
+    "banana",
+    "yellow",
+    "peel",
+    "fruit"]},  {
+  item: "Citrus Rinds",
+  id: 2,
+  keywords: [
+    "orange",
+    "lemon",
+    "lime",
+    "grapefruit"]}, {
+  item: "Fruit Leaves",
+  id: 3,
+  keywords: [
+      "leaf",
+      "leaves",
+      "green",
+      "plant",
+      "stem"]}
+] //end compmat array
+
+var options = {
+  keys: [{
+    name: 'item'
+    weight: 0.7
+  }, {
+    name: 'keywords'
+    weight: 0.3
+  }]  //end array
+}; //end options
