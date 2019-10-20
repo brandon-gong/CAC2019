@@ -26,7 +26,6 @@ import {
     Text,
     TextInput,
     View,
-    Button,
     TouchableOpacity,
     Switch
 } from 'react-native';
@@ -66,7 +65,7 @@ class SettingsScreen extends React.Component {
                         <Icon name={(this.state.switch1Active) ? "bell" : "bell-off"} size={20} style={this.styles.leftIcons}/>
                         <Text style={this.styles.listElementText}>Daily Tip Notification</Text>
                     </View>
-                    <View style={{flex: 1}}>
+                    <View style={{flex: 1, flexDirection: "row-reverse"}}>
                         <Switch
                             value={this.state.switch1Active}
                             onValueChange={(val) => {this.setState({switch1Active: val}); ConfigStorage.getInstance().setNotificationsOn(val)}}

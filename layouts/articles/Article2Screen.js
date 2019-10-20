@@ -131,7 +131,7 @@ class Article2Screen extends React.Component {
                             borderRadius: 5}}/>
                     <Text style={this.styles.bodyText}>
                         Leave a bucket in your backyard or patio and let the
-                        rain water fil it. There are hundreds of ways to re-USE
+                        rain water fill it. There are hundreds of ways to re-USE
                         this water. Give to the plants or filter it for drinking.
                         {"\n\n"}
                         These few steps can make a HUGE difference and can
@@ -156,7 +156,8 @@ class Article2Screen extends React.Component {
           textAlign: "right",
           lineHeight: 40,
           marginTop: 30,
-          marginRight: 30
+          marginRight: 30,
+          marginLeft: 30,
       },
       subHeader: {
           fontFamily: 'sans-bold',

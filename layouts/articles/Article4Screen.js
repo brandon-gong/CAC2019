@@ -115,7 +115,8 @@ class Article4Screen extends React.Component {
           textAlign: "right",
           lineHeight: 40,
           marginTop: 30,
-          marginRight: 30
+          marginRight: 30,
+          marginLeft: 30,
       },
       bodyText: {
           fontFamily: GlobalData.getInstance()._pFontFamily,

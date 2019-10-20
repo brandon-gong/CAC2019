@@ -145,7 +145,8 @@ class Article3Screen extends React.Component {
           textAlign: "right",
           lineHeight: 40,
           marginTop: 30,
-          marginRight: 30
+          marginRight: 30,
+          marginLeft: 30,
       },
       subHeader: {
           fontFamily: 'sans-bold',
