@@ -12,6 +12,8 @@ import { Camera } from 'expo-camera';
 import { Feather as Icon } from '@expo/vector-icons';
 import GlobalData from '../../data/GlobalData'
 
+const fetch = require("node-fetch");
+
 export default class CameraView extends React.Component {
   state = {
     hasCameraPermission: null,
@@ -20,6 +22,7 @@ export default class CameraView extends React.Component {
     ratio: "16:9",
     width: Math.round(Dimensions.get('window').width),
     height: Math.round(Dimensions.get('window').width * 1.77778),
+    showThing: false,
   };
 
   async componentDidMount() {
@@ -54,18 +57,25 @@ export default class CameraView extends React.Component {
             onCameraReady={this.calcRatio}
             ratio={this.state.ratio}
             zoom={0}
+            flashMode={this.state.flash ? Camera.Constants.FlashMode.on : Camera.Constants.FlashMode.off}
           />
           <View style={this.styles.buttonContainer}>
             <TouchableOpacity style={this.styles.smallButton} onPress={() => this.setState({flash: !this.state.flash})}>
                 <Icon style={{color: GlobalData.getInstance()._fgAccentColor}} name={this.state.flash ? "zap" : "zap-off"} size={15}/>
             </TouchableOpacity>
-            <TouchableOpacity style={this.styles.bigButton} onPress={null}>
+            <TouchableOpacity style={this.styles.bigButton} onPress={this.snap}>
                 <Icon style={{color: "white"}} name="camera" size={25}/>
             </TouchableOpacity>
-            <TouchableOpacity style={this.styles.smallButton} onPress={null}>
+            <TouchableOpacity 
+              style={this.styles.smallButton}
+              onPress={() => this.setState({
+                type: (this.state.type === Camera.Constants.Type.back)
+                  ? Camera.Constants.Type.front
+                  : Camera.Constants.Type.back})}>
                 <Icon style={{color: GlobalData.getInstance()._fgAccentColor}} name="refresh-cw" size={15}/>
             </TouchableOpacity>
           </View>
+          {this.state.showThing && <View style={{width: 100, height: 100, backgroundColor: "white", marginTop: -0.5*(Dimensions.get('window').height)}}></View>}
         </View>
       );
     }
@@ -90,6 +100,48 @@ export default class CameraView extends React.Component {
     let unitSize = Math.round(Math.max(Dimensions.get('window').height / brNums[0], Dimensions.get('window').width / brNums[1]));
     this.setState({ratio: bestRatio, width: unitSize*brNums[1], height: unitSize*brNums[0]});
   }
+
+  snap = async () => {
+    if (this.camera) {
+      this.setState({showThing: true});
+      console.log("here");
+      let photo = await this.camera.takePictureAsync({base64: true});
+      let opts = {
+        "requests":[
+            {
+                "image":{
+                    "content": photo.base64
+                },
+                "features":[
+                    {
+                        "type":"LABEL_DETECTION",
+                        "maxResults":10
+                    }
+                ]
+            }
+        ]
+      }
+      fetch('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAr3tUJjFH9fXUfu7yA_o2KRWYRcfjC8Nk', {
+          method: 'post',
+          body: JSON.stringify(opts)
+      }).then((response) => {
+          return response.json();
+      }, (error) => {
+        console.log(error);
+        this.setState({showThing: false});
+      }).then((data) => {
+          let candidates = data.responses[0].labelAnnotations.filter((annotation) => annotation.score > 0.80);
+          let reccs = [];
+          for(let i = 0; i < Math.min(candidates.length, 5); i++) {
+            reccs.push({name: candidates[i].description});
+          }
+          
+          console.log(JSON.stringify(candidates, null, 2));
+          console.log(JSON.stringify(data));
+          this.setState({showThing: false});
+      });
+    }
+  };
 
   styles = StyleSheet.create({
     buttonContainer: {

@@ -24,7 +24,8 @@ import {
     View,
     TextInput,
     TouchableOpacity,
-    Text
+    Text,
+    Dimensions
 } from 'react-native';
 import Constants from 'expo-constants'
 import CameraWrapper from './catalog/CameraWrapper'
@@ -130,8 +131,8 @@ class CatalogScreen extends React.Component {
         shadowRadius: 2,
         shadowOffset: {width: 2, height: 2},
         flexDirection: "row",
-        height: 99999, // this is the dumbest thing ive ever seen
-        marginBottom: -99999
+        height: Math.round(Dimensions.get('window').height * 0.6),
+        marginBottom: -Math.round(Dimensions.get('window').height * 0.6),
       },
       searchBar: {
         borderRadius: 24,
