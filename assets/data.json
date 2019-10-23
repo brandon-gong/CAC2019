@@ -1,7 +1,7 @@
 [
     {
-        "parent": "kitchen",
-        "name": "Apple Cores",
+        "parent": "In the Kitchen",
+        "name": "Apple cores",
         "type": "g",
         "keywords": [
             "apple",
@@ -25,8 +25,8 @@
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name": "Banana Peels",
+        "parent": "In the Kitchen",
+        "name": "Banana peels",
         "type": "g",
         "keywords": [
             "banana",
@@ -37,129 +37,7 @@
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name": "Citrus Rinds",
-        "type": "g",
-        "keywords": [
-            "orange",
-            "lemon",
-            "lime",
-            "grapefruit",
-            "rind",
-            "peel",
-            "zest",
-            "fruit"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name": "Fruit Leaves",
-        "type": "g",
-        "keywords": [
-            "leaf",
-            "leaves",
-            "green",
-            "fruit",
-            "plant",
-            "stem",
-            "strawberry",
-            "cherry",
-            "raspberry",
-            "peach",
-            "tomato"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name": "Mushy Wastes",
-        "type": "g",
-        "keywords": [
-            "mushy",
-            "squishy",
-            "Pulpy",
-            "soft",
-            "blob",
-            "strawberry",
-            "cherry",
-            "raspberry",
-            "blueberry",
-            "grape",
-            "waste"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name": "Melon Rinds",
-        "type": "g",
-        "keywords": [
-            "melon",
-            "rind",
-            "watermelon",
-            "cantaloupe",
-            "pumpkin",
-            "muskmelon",
-            "seeds",
-            "honeydew"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name": "leftovers",
-        "type": "g",
-        "keywords": [
-            "bagasse",
-            "pits",
-            "Avocado",
-            "stem",
-            "seed"
-        ],
-        "tips": "Chop up avocado pits so they don't sprout!"
-    },
-    {
-        "parent": "kitchen",
-        "name": "Wine",
-        "type": "g",
-        "keywords": [
-            "wine",
-            "grape",
-            "vin",
-            "plonk",
-            "alcohol",
-            "ferment",
-            "glass",
-            "bottle",
-            "pinot",
-            "chardonnay",
-            "cabernet",
-            "merlot",
-            "sauvignon",
-            "blanc",
-            "zinfandel",
-            "riesling",
-            "syrah"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name": "Corks",
-        "type": "b",
-        "keywords": [
-            "cork",
-            "wood",
-            "bark",
-            "stopper",
-            "wine",
-            "plug"
-        ],
-        "tips": "Chop these up so they decompose faster!"
-    },
-    {
-        "parent": "kitchen",
+        "parent": "In the Kitchen",
         "name": "Beer",
         "type": "g",
         "keywords": [
@@ -196,146 +74,114 @@
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name": "Plant-based milks",
-        "type": "g",
-        "keywords": [
-            "milk",
-            "dairy",
-            "almond",
-            "coconut",
-            "rice",
-            "soy",
-            "rice",
-            "peanut",
-            "oat",
-            "white",
-            "cereal",
-            "vegan"
-        ],
-        "tips": "Try not to compost real milk, it can attract pests!"
-    },
-    {
-        "parent": "kitchen",
-        "name": "Coffee grounds",
-        "type": "g",
-        "keywords": [
-            "coffee",
-            "bean",
-            "caffeine",
-            "roast",
-            "joe",
-            "java",
-            "latte",
-            "cappucino",
-            "espresso",
-            "macchiato",
-            "black",
-            "arabica",
-            "robusta",
-            "liberica",
-            "excelsa",
-            "starbucks",
-            "folger",
-            "dunkin",
-            "maxwell",
-            "nescafe",
-            "blend"
+        "parent": "In the Kitchen",
+        "name" : "Bread",
+        "type" : "b",
+        "keywords" : [
+            "bread",
+            "loaf",
+            "toast",
+            "pita",
+            "tortilla",
+            "bagel",
+            "dough",
+            "breadstick",
+            "crust",
+            "nan",
+            "pretzel",
+            "crouton",
+            "pitta",
+            "pita",
+            "baguette",
+            "bannock",
+            "biscuit",
+            "muffin",
+            "crumb",
+            "brioche",
+            "cornbread",
+            "flatbread",
+            "roll"
         ],
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name": "Coffee filters",
-        "type": "b",
-        "keywords": [
-            "coffee",
-            "paper",
-            "strainer",
-            "sieve",
-            "thin"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name": "Tea bags",
-        "type": "b",
-        "keywords": [
-            "tea",
-            "pouch",
-            "lipton",
-            "twining",
-            "leaf",
-            "porous"
-        ],
-        "tips": "Make sure they're made of natural materials like hemp or cotton."
-    },
-    {
-        "parent": "kitchen",
-        "name": "Tea leaves",
-        "type": "g",
-        "keywords": [
-            "tea",
-            "caffeine",
-            "dry",
-            "green",
-            "black",
-            "herb",
-            "oolong",
-            "ferment",
-            "infusion",
-            "puer",
-            "lipton",
-            "twining",
-            "bigelow",
-            "tetley",
-            "leaf"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name": "Pasta sauces",
-        "type": "g",
-        "keywords": [
-            "sauce",
-            "tomato",
-            "paste",
-            "marinara",
-            "arrabbiata",
-            "italian",
-            "barilla",
-            "prego",
-            "ragu",
-            "heinz"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name": "Melted ice cream",
-        "type": "g",
-        "keywords": [
-            "dessert",
-            "milk",
-            "frozen",
-            "yogurt",
-            "custard",
-            "soft",
+        "parent": "In the Kitchen",
+        "name" : "Candy",
+        "type" : "g",
+        "keywords" : [
+            "candy",
+            "sweet",
+            "sour",
             "chocolate",
-            "vanilla",
-            "haagen",
-            "blue",
-            "ben",
-            "breyer",
-            "magnum",
-            "edy"
+            "jam",
+            "jellies",
+            "hard",
+            "Hersheys",
+            "SourPatchKids",
+            "Twix",
+            "Snickers",
+            "lollipop",
+            "KitKat",
+            "Skittles",
+            "M&Ms",
+            "gummy",
+            "gummies",
+            "3Musketeers",
+            "MilkyWay",
+            "FunDip",
+            "AlmondJoy",
+            "Cadbury",
+            "Starburst",
+            "Nerds",
+            "Reeses"
         ],
-        "tips": "Only a little bit at a time, otherwise you'll attract pests!"
+        "tips": null
     },
     {
-        "parent": "kitchen",
+        "parent": "In the Kitchen",
+        "name" : "Cardboard cartons",
+        "type" : "b",
+        "keywords" : [
+            "carton",
+            "yolk",
+            "eggs",
+            "dozen",
+            "Kirkland",
+            "Egglands",
+            "Nellies",
+            "GreatValue",
+            "Heritage"
+        ],
+        "tips": null   
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Cereal",
+        "type" : "b",
+        "keywords" : [
+            "cereal",
+            "oatmeal",
+            "grits",
+            "polenta",
+            "Kellogs",
+            "box",
+            "breakfast",
+            "Cheerios",
+            "Froot Loops",
+            "Lucky Charms",
+            "Cinnamon Toast Crunch",
+            "Frosted Flakes",
+            "Raisin Bran",
+            "Fruity Pebbles",
+            "Honey Bunches",
+            "SpecialK",
+            "Trix",
+            "CocoaPuffs"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
         "name": "Cheese",
         "type": "g",
         "keywords": [
@@ -367,7 +213,188 @@
         "tips": "Compost in moderation."
     },
     {
-        "parent": "kitchen",
+        "parent": "In the Kitchen",
+        "name" : "Chips",
+        "type" : "b",
+        "keywords" : [
+            "chips",
+            "chip",
+            "nacho",
+            "crisp",
+            "corn",
+            "potato",
+            "tortilla",
+            "Lays",
+            "Pringles",
+            "Ruffles",
+            "Tostitos",
+            "Kettle",
+            "Cape cod",
+            "Cheetos",
+            "Doritos",
+            "Fritos",
+            "SunChips",
+            "Funyuns",
+            "yellow",
+            "orange",
+            "potato",
+            "Popchips"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name": "Citrus rinds",
+        "type": "g",
+        "keywords": [
+            "orange",
+            "lemon",
+            "lime",
+            "grapefruit",
+            "rind",
+            "peel",
+            "zest",
+            "fruit"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name": "Coffee filters",
+        "type": "b",
+        "keywords": [
+            "coffee",
+            "paper",
+            "strainer",
+            "sieve",
+            "thin"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name": "Coffee grounds",
+        "type": "g",
+        "keywords": [
+            "coffee",
+            "bean",
+            "caffeine",
+            "roast",
+            "joe",
+            "java",
+            "latte",
+            "cappucino",
+            "espresso",
+            "macchiato",
+            "black",
+            "arabica",
+            "robusta",
+            "liberica",
+            "excelsa",
+            "starbucks",
+            "folger",
+            "dunkin",
+            "maxwell",
+            "nescafe",
+            "blend"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name": "Corks",
+        "type": "b",
+        "keywords": [
+            "cork",
+            "wood",
+            "bark",
+            "stopper",
+            "wine",
+            "plug"
+        ],
+        "tips": "Chop these up so they decompose faster!"
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Crackers",
+        "type" : "b",
+        "keywords" : [
+            "crackers",
+            "biscuit",
+            "dry",
+            "square",
+            "crisp",
+            "saltine",
+            "Ritz",
+            "CheezIt",
+            "WheatThins",
+            "Matzo",
+            "BetterCheddars"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Edible algae",
+        "type" : "g",
+        "keywords" : [
+            "algae",
+            "seaweed",
+            "kelp",
+            "nori",
+            "edible"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Egg shells",
+        "type" : "b",
+        "keywords" : [
+            "egg",
+            "shells",
+            "shell"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Energy & protein bars",
+        "type" : "g",
+        "keywords" : [
+            "bars",
+            "energy",
+            "protein",
+            "larabar",
+            "probar",
+            "clif",
+            "kind",
+            "picky",
+            "powerbar"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name": "Fruit leaves",
+        "type": "g",
+        "keywords": [
+            "leaf",
+            "leaves",
+            "green",
+            "fruit",
+            "plant",
+            "stem",
+            "strawberry",
+            "cherry",
+            "raspberry",
+            "peach",
+            "tomato"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
         "name": "Jellies, jams, and preserves",
         "type": "g",
         "keywords": [
@@ -396,7 +423,125 @@
         "tips": null
     },
     {
-        "parent": "kitchen",
+        "parent": "In the Kitchen",
+        "name": "Leftovers",
+        "type": "g",
+        "keywords": [
+            "bagasse",
+            "pits",
+            "Avocado",
+            "stem",
+            "seed"
+        ],
+        "tips": "Chop up avocado pits so they don't sprout!"
+    },
+    {
+        "parent": "In the Kitchen",
+        "name": "Melon rinds",
+        "type": "g",
+        "keywords": [
+            "melon",
+            "rind",
+            "watermelon",
+            "cantaloupe",
+            "pumpkin",
+            "muskmelon",
+            "seeds",
+            "honeydew"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name": "Melted ice cream",
+        "type": "g",
+        "keywords": [
+            "dessert",
+            "milk",
+            "frozen",
+            "yogurt",
+            "custard",
+            "soft",
+            "chocolate",
+            "vanilla",
+            "haagen",
+            "blue",
+            "ben",
+            "breyer",
+            "magnum",
+            "edy"
+        ],
+        "tips": "Only a little bit at a time, otherwise you'll attract pests!"
+    },
+    {
+        "parent": "In the Kitchen",
+        "name": "Mushy wastes",
+        "type": "g",
+        "keywords": [
+            "mushy",
+            "squishy",
+            "Pulpy",
+            "soft",
+            "blob",
+            "strawberry",
+            "cherry",
+            "raspberry",
+            "blueberry",
+            "grape",
+            "waste"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Nut shells",
+        "type" : "b",
+        "keywords" : [
+            "nuts",
+            "shells",
+            "peanut",
+            "pine",
+            "pistachio",
+            "pecan",
+            "macadamia",
+            "almond",
+            "pecan",
+            "cashew"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Paper bags",
+        "type" : "b",
+        "keywords" : [
+            "paper",
+            "bags",
+            "bag",
+            "brown",
+            "dry",
+            "lunch"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Paper liners",
+        "type" : "b",
+        "keywords" : [
+            "liners",
+            "muffin",
+            "cup",
+            "cupcake",
+            "liner",
+            "paper",
+            "baking",
+            "bake"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
         "name" : "Paper napkins",
         "type" : "b",
         "keywords" : [
@@ -414,7 +559,24 @@
         "tips": null
     },
     {
-        "parent": "kitchen",
+        "parent": "In the Kitchen",
+        "name" : "Paper plates",
+        "type" : "b",
+        "keywords" : [
+            "paper",
+            "plate",
+            "white",
+            "Dixie",
+            "Hefty",
+            "Glad",
+            "bowl",
+            "Parties and Festivities",
+            "disposable"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
         "name" : "Paper towels",
         "type" : "b",
         "keywords" : [
@@ -433,55 +595,127 @@
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name" : "Paper bags",
+        "parent": "In the Kitchen",
+        "name" : "Pasta",
+        "type" : "g",
+        "keywords" : [
+            "pasta",
+            "spaghetti",
+            "pappardelle",
+            "farfalle",
+            "shells",
+            "campanelle",
+            "bucatini",
+            "angel",
+            "hair",
+            "gnocchi",
+            "tortiglioni"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name": "Pasta sauces",
+        "type": "g",
+        "keywords": [
+            "sauce",
+            "tomato",
+            "paste",
+            "marinara",
+            "arrabbiata",
+            "italian",
+            "barilla",
+            "prego",
+            "ragu",
+            "heinz"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Pizza boxes",
         "type" : "b",
         "keywords" : [
-            "paper",
-            "bags",
-            "bag",
+            "box",
+            "pizza",
+            "cardboard",
+            "rectangle",
             "brown",
-            "dry",
-            "lunch"
+            "Dominos",
+            "Pizza Hut",
+            "Little Caesars",
+            "Papa Johns",
+            "Papa Murphys",
+            "California Pizza In the Kitchen",
+            "Marcos Pizza"
         ],
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name" : "Paper plates",
-        "type" : "b",
-        "keywords" : [
-            "paper",
-            "plate",
+        "parent": "In the Kitchen",
+        "name": "Plant-based milks",
+        "type": "g",
+        "keywords": [
+            "milk",
+            "dairy",
+            "almond",
+            "coconut",
+            "rice",
+            "soy",
+            "rice",
+            "peanut",
+            "oat",
             "white",
-            "Dixie",
-            "Hefty",
-            "Glad",
-            "bowl",
-            "party",
-            "disposable"
+            "cereal",
+            "vegan"
         ],
-        "tips": null
+        "tips": "Try not to compost real milk, it can attract pests!"
     },
     {
-        "parent": "kitchen",
-        "name" : "Toothpicks",
+        "parent": "In the Kitchen",
+        "name" : "Popcorn kernels",
         "type" : "b",
         "keywords" : [
-            "toothpick", 
-            "toothpicks",
-            "stick",
-            "bamboo",
-            "wooden",
-            "wood", 
-            "thin", 
-            "point", 
-            "sharp"
+            "popcorn",
+            "kernels",
+            "movie"
         ],
         "tips": null
     },
     {
-        "parent": "kitchen",
+        "parent": "In the Kitchen",
+        "name" : "Rice",
+        "type" : "g",
+        "keywords" : [
+            "rice",
+            "white",
+            "brown",
+            "black",
+            "grain",
+            "long",
+            "medium",
+            "short",
+            "wehani",
+            "sprouted",
+            "jasmine",
+            "sticky"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Seeds",
+        "type" : "b",
+        "keywords" : [
+            "seeds",
+            "pumpkin",
+            "sunflower",
+            "sesame"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
         "name" : "Skewers",
         "type" : "b",
         "keywords" : [
@@ -498,23 +732,7 @@
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name" : "Paper Liners",
-        "type" : "b",
-        "keywords" : [
-            "liners",
-            "muffin",
-            "cup",
-            "cupcake",
-            "liner",
-            "paper",
-            "baking",
-            "bake"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
+        "parent": "In the Kitchen",
         "name" : "Spices",
         "type" : "g",
         "keywords" : [
@@ -548,291 +766,76 @@
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name" : "Egg shells",
-        "type" : "b",
-        "keywords" : [
-            "egg",
-            "shells",
-            "shell"
+        "parent": "In the Kitchen",
+        "name": "Tea bags",
+        "type": "b",
+        "keywords": [
+            "tea",
+            "pouch",
+            "lipton",
+            "twining",
+            "leaf",
+            "porous"
         ],
-        "tips": null
+        "tips": "Make sure they're made of natural materials like hemp or cotton."
     },
     {
-        "parent": "kitchen",
-        "name" : "Cardboard cartons",
-        "type" : "b",
-        "keywords" : [
-            "carton",
-            "yolk",
-            "eggs",
-            "dozen",
-            "Kirkland",
-            "Egglands",
-            "Nellies",
-            "GreatValue",
-            "Heritage"
-        ],
-        "tips": null   
-    },
-    {
-        "parent": "kitchen",
-        "name" : "Pizza boxes",
-        "type" : "b",
-        "keywords" : [
-            "box",
-            "pizza",
-            "cardboard",
-            "rectangle",
-            "brown",
-            "Dominos",
-            "Pizza Hut",
-            "Little Caesars",
-            "Papa Johns",
-            "Papa Murphys",
-            "California Pizza Kitchen",
-            "Marcos Pizza"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name" : "Nut shells",
-        "type" : "b",
-        "keywords" : [
-            "nuts",
-            "shells",
-            "peanut",
-            "pine",
-            "pistachio",
-            "pecan",
-            "macadamia",
-            "almond",
-            "pecan",
-            "cashew"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name" : "Popcorn kernels",
-        "type" : "b",
-        "keywords" : [
-            "popcorn",
-            "kernels",
-            "movie"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name" : "Candy",
-        "type" : "g",
-        "keywords" : [
-            "candy",
-            "sweet",
-            "sour",
-            "chocolate",
-            "jam",
-            "jellies",
-            "hard",
-            "Hersheys",
-            "SourPatchKids",
-            "Twix",
-            "Snickers",
-            "lollipop",
-            "KitKat",
-            "Skittles",
-            "M&Ms",
-            "gummy",
-            "gummies",
-            "3Musketeers",
-            "MilkyWay",
-            "FunDip",
-            "AlmondJoy",
-            "Cadbury",
-            "Starburst",
-            "Nerds",
-            "Reeses"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name" : "Seeds",
-        "type" : "b",
-        "keywords" : [
-            "seeds",
-            "pumpkin",
-            "sunflower",
-            "sesame"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name" : "Bread",
-        "type" : "b",
-        "keywords" : [
-            "bread",
-            "loaf",
-            "toast",
-            "pita",
-            "tortilla",
-            "bagel",
-            "dough",
-            "breadstick",
-            "crust",
-            "nan",
-            "pretzel",
-            "crouton",
-            "pitta",
-            "pita",
-            "baguette",
-            "bannock",
-            "biscuit",
-            "muffin",
-            "crumb",
-            "brioche",
-            "cornbread",
-            "flatbread",
-            "roll"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name" : "Chips",
-        "type" : "b",
-        "keywords" : [
-            "chips",
-            "chip",
-            "nacho",
-            "crisp",
-            "corn",
-            "potato",
-            "tortilla",
-            "Lays",
-            "Pringles",
-            "Ruffles",
-            "Tostitos",
-            "Kettle",
-            "Cape cod",
-            "Cheetos",
-            "Doritos",
-            "Fritos",
-            "SunChips",
-            "Funyuns",
-            "yellow",
-            "orange",
-            "potato",
-            "Popchips"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name" : "Crackers",
-        "type" : "b",
-        "keywords" : [
-            "crackers",
-            "biscuit",
+        "parent": "In the Kitchen",
+        "name": "Tea leaves",
+        "type": "g",
+        "keywords": [
+            "tea",
+            "caffeine",
             "dry",
-            "square",
-            "crisp",
-            "saltine",
-            "Ritz",
-            "CheezIt",
-            "WheatThins",
-            "Matzo",
-            "BetterCheddars"
+            "green",
+            "black",
+            "herb",
+            "oolong",
+            "ferment",
+            "infusion",
+            "puer",
+            "lipton",
+            "twining",
+            "bigelow",
+            "tetley",
+            "leaf"
         ],
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name" : "Cereal",
+        "parent": "In the Kitchen",
+        "name" : "Tofu & tempeh",
+        "type" : "g",
+        "keywords" : [
+            "tofu",
+            "tempeh",
+            "soybeans",
+            "cake",
+            "curd",
+            "firm",
+            "soft"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "In the Kitchen",
+        "name" : "Toothpicks",
         "type" : "b",
         "keywords" : [
-            "cereal",
-            "oatmeal",
-            "grits",
-            "polenta",
-            "Kellogs",
-            "box",
-            "breakfast",
-            "Cheerios",
-            "Froot Loops",
-            "Lucky Charms",
-            "Cinnamon Toast Crunch",
-            "Frosted Flakes",
-            "Raisin Bran",
-            "Fruity Pebbles",
-            "Honey Bunches",
-            "SpecialK",
-            "Trix",
-            "CocoaPuffs"
+            "toothpick", 
+            "toothpicks",
+            "stick",
+            "bamboo",
+            "wooden",
+            "wood", 
+            "thin", 
+            "point", 
+            "sharp"
         ],
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name" : "Pasta",
-        "type" : "g",
-        "keywords" : [
-            "pasta",
-            "spaghetti",
-            "pappardelle",
-            "farfalle",
-            "shells",
-            "campanelle",
-            "bucatini",
-            "angel",
-            "hair",
-            "gnocchi",
-            "tortiglioni"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name" : "Rice",
-        "type" : "g",
-        "keywords" : [
-            "rice",
-            "white",
-            "brown",
-            "black",
-            "grain",
-            "long",
-            "medium",
-            "short",
-            "wehani",
-            "sprouted",
-            "jasmine",
-            "sticky"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
-        "name" : "Energy & Protein Bars",
-        "type" : "g",
-        "keywords" : [
-            "bars",
-            "energy",
-            "protein",
-            "larabar",
-            "probar",
-            "clif",
-            "kind",
-            "picky",
-            "powerbar"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "kitchen",
+        "parent": "In the Kitchen",
         "name" : "Vegetables",
         "type" : "g",
         "keywords" : [
@@ -867,52 +870,46 @@
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name" : "Tofu & Tempeh",
-        "type" : "g",
-        "keywords" : [
-            "tofu",
-            "tempeh",
-            "soybeans",
-            "cake",
-            "curd",
-            "firm",
-            "soft"
+        "parent": "In the Kitchen",
+        "name": "Wine",
+        "type": "g",
+        "keywords": [
+            "wine",
+            "grape",
+            "vin",
+            "plonk",
+            "alcohol",
+            "ferment",
+            "glass",
+            "bottle",
+            "pinot",
+            "chardonnay",
+            "cabernet",
+            "merlot",
+            "sauvignon",
+            "blanc",
+            "zinfandel",
+            "riesling",
+            "syrah"
         ],
         "tips": null
     },
     {
-        "parent": "kitchen",
-        "name" : "Edible Algae",
-        "type" : "g",
-        "keywords" : [
-            "algae",
-            "seaweed",
-            "kelp",
-            "nori",
-            "edible"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "bathroom",
-        "name": "Facial tissues",
+        "parent": "From the Bathroom",
+        "name": "Condoms",
         "type": "b",
         "keywords": [
-            "paper",
-            "kleenex",
-            "soft",
-            "thin",
-            "puff",
-            "scott",
-            "hankerchief",
-            "allergy",
-            "napkin"
+            "condom",
+            "men",
+            "boy",
+            "latex",
+            "lambskin",
+            "rubber"
         ],
         "tips": null
     },
     {
-        "parent": "bathroom",
+        "parent": "From the Bathroom",
         "name": "Cotton products",
         "type": "b",
         "keywords": [
@@ -930,7 +927,24 @@
         "tips": "You can only compost 100% cotton products.  Double check!"
     },
     {
-        "parent": "bathroom",
+        "parent": "From the Bathroom",
+        "name": "Facial tissues",
+        "type": "b",
+        "keywords": [
+            "paper",
+            "kleenex",
+            "soft",
+            "thin",
+            "puff",
+            "scott",
+            "hankerchief",
+            "allergy",
+            "napkin"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "From the Bathroom",
         "name": "Hair",
         "type": "b",
         "keywords": [
@@ -947,21 +961,7 @@
         "tips": null
     },
     {
-        "parent": "bathroom",
-        "name": "Toilet Paper Rolls",
-        "type": "b",
-        "keywords": [
-            "toilet",
-            "paper",
-            "rolls",
-            "white",
-            "shredded",
-            "bath"
-        ],
-        "tips": "Shred these so they break down faster."
-    },
-    {
-        "parent": "bathroom",
+        "parent": "From the Bathroom",
         "name": "Loofahs",
         "type": "b",
         "keywords": [
@@ -974,7 +974,19 @@
         "tips": null
     },
     {
-        "parent": "bathroom",
+        "parent": "From the Bathroom",
+        "name": "Menstrual blood",
+        "type": "g",
+        "keywords": [
+            "menstrual",
+            "female",
+            "girl",
+            "cycle"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "From the Bathroom",
         "name": "Nail clippings",
         "type": "b",
         "keywords": [
@@ -987,31 +999,19 @@
         "tips": null
     },
     {
-        "parent": "bathroom",
-        "name": "Urine",
-        "type": "g",
-        "keywords": [
-            "pee",
-            "toilet"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "bathroom",
-        "name": "Condoms",
+        "parent": "From the Bathroom",
+        "name": "Sanitary pads",
         "type": "b",
         "keywords": [
-            "condom",
-            "men",
-            "boy",
-            "latex",
-            "lambskin",
-            "rubber"
+            "pads",
+            "sanitary",
+            "female",
+            "girl"
         ],
         "tips": null
     },
     {
-        "parent": "bathroom",
+        "parent": "From the Bathroom",
         "name": "Tampons",
         "type": "b",
         "keywords": [
@@ -1023,88 +1023,32 @@
         "tips": null
     },
     {
-        "parent": "bathroom",
-        "name": "Sanitary Pads",
+        "parent": "From the Bathroom",
+        "name": "Toilet paper rolls",
         "type": "b",
         "keywords": [
-            "pads",
-            "sanitary",
-            "female",
-            "girl"
+            "toilet",
+            "paper",
+            "rolls",
+            "white",
+            "shredded",
+            "bath"
         ],
-        "tips": null
+        "tips": "Shred these so they break down faster."
     },
     {
-        "parent": "bathroom",
-        "name": "Menstrual Blood",
+        "parent": "From the Bathroom",
+        "name": "Urine",
         "type": "g",
         "keywords": [
-            "menstrual",
-            "female",
-            "girl",
-            "cycle"
+            "pee",
+            "toilet"
         ],
         "tips": null
     },
     {
-        "parent": "party",
-        "name": "Wrapping paper",
-        "type": "b",
-        "keywords": [
-            "wrapping",
-            "paper",
-            "festive",
-            "holiday",
-            "presents",
-            "holiday",
-            "party",
-            "cut"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "party",
-        "name": "Table cloths",
-        "type": "b",
-        "keywords": [
-            "table",
-            "cloths",
-            "torn",
-            "party",
-            "festive",
-            "holiday"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "party",
-        "name": "Streamers",
-        "type": "b",
-        "keywords": [
-            "paper",
-            "shredded",
-            "confetti",
-            "party"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "party",
-        "name": "Latex Balloons",
-        "type": "b",
-        "keywords": [
-            "balloons",
-            "latex",
-            "blown",
-            "bubble",
-            "holiday",
-            "party"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "party",
-        "name": "Hay and Straw",
+        "parent": "Parties and Festivities",
+        "name": "Hay and straw",
         "type": "b",
         "keywords": [
             "hay",
@@ -1118,7 +1062,63 @@
         "tips": null
     },
     {
-        "parent": "party",
+        "parent": "Parties and Festivities",
+        "name": "Latex balloons",
+        "type": "b",
+        "keywords": [
+            "balloons",
+            "latex",
+            "blown",
+            "bubble",
+            "holiday",
+            "Parties and Festivities"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Parties and Festivities",
+        "name": "Streamers",
+        "type": "b",
+        "keywords": [
+            "paper",
+            "shredded",
+            "confetti",
+            "Parties and Festivities"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Parties and Festivities",
+        "name": "Table cloths",
+        "type": "b",
+        "keywords": [
+            "table",
+            "cloths",
+            "torn",
+            "Parties and Festivities",
+            "festive",
+            "holiday"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Parties and Festivities",
+        "name": "Wrapping paper",
+        "type": "b",
+        "keywords": [
+            "wrapping",
+            "paper",
+            "festive",
+            "holiday",
+            "presents",
+            "holiday",
+            "Parties and Festivities",
+            "cut"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Parties and Festivities",
         "name": "Wreaths",
         "type": "b",
         "keywords": [
@@ -1134,8 +1134,8 @@
         "tips": null
     },
     {
-        "parent": "office",
-        "name": "Bills and Documents",
+        "parent": "Office & Work",
+        "name": "Bills and documents",
         "type": "b",
         "keywords": [
             "bills",
@@ -1152,46 +1152,8 @@
         "tips": null
     },
     {
-        "parent": "office",
-        "name": "Envelopes",
-        "type": "b",
-        "keywords": [
-            "envelopes",
-            "shredded",
-            "paper",
-            "mail"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "office",
-        "name": "Pencil Shavings",
-        "type": "b",
-        "keywords": [
-            "shavings",
-            "pencil",
-            "wood",
-            "scraps",
-            "sharpener"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "office",
-        "name": "Sticky Notes",
-        "type": "b",
-        "keywords": [
-            "sticky",
-            "notes",
-            "yellow",
-            "paper",
-            "square"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "office",
-        "name": "Business Cards",
+        "parent": "Office & Work",
+        "name": "Business cards",
         "type": "b",
         "keywords": [
             "cards",
@@ -1203,96 +1165,45 @@
         "tips": null
     },
     {
-        "parent": "house",
-        "name": "Dust",
+        "parent": "Office & Work",
+        "name": "Envelopes",
         "type": "b",
         "keywords": [
-            "dust",
-            "fuzz",
-            "pan",
-            "bunnies"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "house",
-        "name": "Countertop crumbs",
-        "type": "b",
-        "keywords": [
-            "crumbs",
-            "countertop",
-            "small",
-            "bits"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "house",
-        "name": "Junk Mail",
-        "type": "b",
-        "keywords": [
-            "mail",
-            "pile",
+            "envelopes",
             "shredded",
-            "subscription"            
-        ],
-        "tips": null
-    },
-    {
-        "parent": "house",
-        "name": "Rope and Twine",
-        "type": "b",
-        "keywords": [
-            "rope",
-            "twine",
-            "natural",
-            "twisted",
             "paper",
-            "fiber"
+            "mail"
         ],
         "tips": null
     },
     {
-        "parent": "house",
-        "name": "Houseplants",
-        "type": "g",
-        "keywords": [
-            "houseplants",
-            "plant",
-            "soil",
-            "dirt",
-            "green",
-            "leaf",
-            "leaves",
-            "pot"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "house",
-        "name": "Flowers",
-        "type": "g",
-        "keywords": [
-            "flowers",
-            "petals",
-            "pollen",
-            "rose"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "house",
-        "name": "Matches",
+        "parent": "Office & Work",
+        "name": "Pencil shavings",
         "type": "b",
         "keywords": [
-            "matches",
-            "stick",
-            "fire"
+            "shavings",
+            "pencil",
+            "wood",
+            "scraps",
+            "sharpener"
         ],
         "tips": null
     },
     {
-        "parent": "house",
+        "parent": "Office & Work",
+        "name": "Sticky notes",
+        "type": "b",
+        "keywords": [
+            "sticky",
+            "notes",
+            "yellow",
+            "paper",
+            "square"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Around the House",
         "name": "Ashes",
         "type": "b",
         "keywords": [
@@ -1308,25 +1219,7 @@
         "tips": null
     },
     {
-        "parent": "house",
-        "name": "Lawn",
-        "type": "g",
-        "keywords": [
-            "lawn",
-            "grass",
-            "sticks",
-            "leaves",
-            "dead",
-            "autumn",
-            "clippings",
-            "green",
-            "thin",
-            "bunch"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "house",
+        "parent": "Around the House",
         "name": "Clothing and fabric",
         "type": "g",
         "keywords": [
@@ -1426,7 +1319,99 @@
         "tips": "Make sure your fabrics are 100% natural (cotton, wool, etc) and cut them up into strips so they break down faster!"
     },
     {
-        "parent": "house",
+        "parent": "Around the House",
+        "name": "Countertop crumbs",
+        "type": "b",
+        "keywords": [
+            "crumbs",
+            "countertop",
+            "small",
+            "bits"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Around the House",
+        "name": "Dust",
+        "type": "b",
+        "keywords": [
+            "dust",
+            "fuzz",
+            "pan",
+            "bunnies"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Around the House",
+        "name": "Flowers",
+        "type": "g",
+        "keywords": [
+            "flowers",
+            "Pet Thingsals",
+            "pollen",
+            "rose"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Around the House",
+        "name": "Houseplants",
+        "type": "g",
+        "keywords": [
+            "plant",
+            "soil",
+            "dirt",
+            "green",
+            "leaf",
+            "leaves",
+            "pot"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Around the House",
+        "name": "Junk mail",
+        "type": "b",
+        "keywords": [
+            "mail",
+            "pile",
+            "shredded",
+            "subscription"            
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Around the House",
+        "name": "Lawn",
+        "type": "g",
+        "keywords": [
+            "lawn",
+            "grass",
+            "sticks",
+            "leaves",
+            "dead",
+            "autumn",
+            "clippings",
+            "green",
+            "thin",
+            "bunch"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Around the House",
+        "name": "Matches",
+        "type": "b",
+        "keywords": [
+            "matches",
+            "stick",
+            "fire"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Around the House",
         "name": "Newspapers",
         "type": "g",
         "keywords": [
@@ -1453,7 +1438,31 @@
         "tips": null
     },
     {
-        "parent": "pet",
+        "parent": "Around the House",
+        "name": "Rope and twine",
+        "type": "b",
+        "keywords": [
+            "rope",
+            "twine",
+            "natural",
+            "twisted",
+            "paper",
+            "fiber"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Pet Things",
+        "name": "Feathers",
+        "type": "b",
+        "keywords": [
+            "feathers",
+            "birds"
+        ],
+        "tips": null
+    },
+    {
+        "parent": "Pet Things",
         "name": "Fur",
         "type": "b",
         "keywords": [
@@ -1467,18 +1476,8 @@
         "tips": null
     },
     {
-        "parent": "pet",
-        "name": "Feathers",
-        "type": "b",
-        "keywords": [
-            "feathers",
-            "birds"
-        ],
-        "tips": null
-    },
-    {
-        "parent": "pet",
-        "name": "Pet Food",
+        "parent": "Pet Things",
+        "name": "Pet food",
         "type": "b",
         "keywords": [
             "food",
@@ -1489,5 +1488,109 @@
             "dry"
         ],
         "tips": null
+    },
+    {
+        "parent": "Non-Compostable",
+        "name": "Black walnut clippings",
+        "type": "n",
+        "keywords": [
+            "Junglans nigra"
+        ],
+        "tips": "Releases substances that might be harmful to plants. Do not compost."
+    },
+    {
+        "parent": "Non-Compostable",
+        "name": "Coal or charcoal ash",
+        "type": "n",
+        "keywords": [
+            "burn",
+            "cinder",
+            "ember",
+            "soot",
+            "slag"
+        ],
+        "tips": "Releases substances that might be harmful to plants. Do not compost."
+    },
+    {
+        "parent": "Non-Compostable",
+        "name": "Dairy products",
+        "type": "n",
+        "keywords": [
+            "cow",
+            "milk",
+            "cheese",
+            "sour cream",
+            "egg"
+        ],
+        "tips": "Creates odor problems and attract pests such as rodents and flies."
+    },
+    {
+        "parent": "Non-Compostable",
+        "name": "Diseased or insect-ridden plants",
+        "type": "n",
+        "keywords": [
+            "spots",
+            "fungus",
+            "cuttings",
+            "sick",
+            "infest"
+        ],
+        "tips": "Diseases or insects might survive and be transferred back to other plants."
+    },
+    {
+        "parent": "Non-Compostable",
+        "name": "Fats, grease, lard, or oils",
+        "type": "n",
+        "keywords": [
+            "olive",
+            "butter",
+            "cream",
+            "heavy",
+            "vegetable",
+            "canola"
+        ],
+        "tips": "Creates odor problems and attract pests such as rodents and flies."
+    },
+    {
+        "parent": "Non-Compostable",
+        "name": "Meat or fish bones and scraps",
+        "type": "n",
+        "keywords": [
+            "beef",
+            "chicken",
+            "lamb",
+            "goat",
+            "ribs",
+            "ham",
+            "cut",
+            "salmon",
+            "tilapia"
+        ],
+        "tips": "Creates odor problems and attract pests such as rodents and flies."
+    },
+    {
+        "parent": "Non-Compostable",
+        "name": "Pet wastes",
+        "type": "n",
+        "keywords": [
+            "poop",
+            "dog",
+            "cat",
+            "litter",
+            "fece"
+        ],
+        "tips": "Might contain parasites, bacteria, germs, pathogens, and viruses harmful to humans."
+    },
+    {
+        "parent": "Non-Compostable",
+        "name": "Yard trimmings with pesticides",
+        "type": "n",
+        "keywords": [
+            "roundup",
+            "pesticide",
+            "herbicide",
+            "weed"
+        ],
+        "tips": "Might kill beneficial composting organisms."
     }
 ]
