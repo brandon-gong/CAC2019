@@ -19,7 +19,7 @@ class CameraWrapper extends React.Component {
     }
     
     render() {
-        return (this.props.isFocused && this.state.visible) ? < CameraView /> : null;
+        return (this.props.isFocused && this.state.visible) ? < CameraView navfunc={this.props.navfunc}/> : null;
     }
 }
 

@@ -25,7 +25,8 @@ import {
     Text
 } from 'react-native';
 import Constants from 'expo-constants';
-import GlobalData from '../data/GlobalData'
+import GlobalData from '../data/GlobalData';
+import ConfigStorage from '../data/ConfigStorage';
 
 class HomeScreen extends React.Component {
 
@@ -38,6 +39,7 @@ class HomeScreen extends React.Component {
                     Header font is {GlobalData.getInstance()._h1FontFamily};
                     body font is {GlobalData.getInstance()._pFontFamily}.
                     Tab bar font is {GlobalData.getInstance()._tabFontFamily}.
+                    NumScans is {ConfigStorage.getInstance().getNumScans()}.
                     {"\n\n"}
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.

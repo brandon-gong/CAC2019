@@ -35,6 +35,8 @@ import Article4Screen from '../layouts/articles/Article4Screen'
 import Article5Screen from '../layouts/articles/Article5Screen'
 
 import CatalogScreen from '../layouts/CatalogScreen';
+import CatalogListScreen from '../layouts/catalog/CatalogListScreen'
+import VisionResultsScreen from '../layouts/catalog/VisionResultsScreen'
 
 import SettingsScreen from '../layouts/SettingsScreen';
 import LicensesScreen from '../layouts/settings/LicensesScreen'
@@ -96,6 +98,8 @@ ArticlesStack.navigationOptions = {
 /////////////////////////////////////////
 const CatalogStack = createStackNavigator({
     Catalog: CatalogScreen,
+    CatalogList: CatalogListScreen,
+    VisionResults: VisionResultsScreen
 });
 CatalogStack.path = '';
 CatalogStack.navigationOptions = {

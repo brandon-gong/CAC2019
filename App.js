@@ -62,6 +62,7 @@ async function loadResourcesAsync() {
       'sans-regular': require('./assets/fonts/SourceSansPro-Regular.otf'),
       'sans-bold': require('./assets/fonts/SourceSansPro-Semibold.otf'),
       'sans-light': require('./assets/fonts/SourceSansPro-Light.otf'),
+      'sans-xlight': require('./assets/fonts/SourceSansPro-ExtraLight.otf'),
       'sans-light-italic': require('./assets/fonts/SourceSansPro-LightIt.otf'),
       'serif-regular': require('./assets/fonts/SourceSerifPro-Regular.otf'),
     })

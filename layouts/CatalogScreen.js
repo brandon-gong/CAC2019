@@ -76,7 +76,7 @@ class CatalogScreen extends React.Component {
               <View style={{height: 24}}></View>
               {this.state.reccs.map((result) => {
                 return (
-                  <TouchableOpacity key={result.name} style={this.styles.searchResultTouchable} onPress={null}>
+                  <TouchableOpacity key={result.name} style={this.styles.searchResultTouchable} onPress={() => this.props.navigation.navigate("CatalogList", {focus: result.name})}>
                     <Text style={{fontFamily: GlobalData.getInstance()._pFontFamily}}>{result.name}</Text>
                   </TouchableOpacity>
                 );
@@ -99,11 +99,11 @@ class CatalogScreen extends React.Component {
                   onBlur={() => this.setState({barIsFocused: false})}/>
                 {this.state.barIsFocused && x}
               </View>
-              <TouchableOpacity style={this.styles.catalogButton} onPress={null}>
+              <TouchableOpacity style={this.styles.catalogButton} onPress={() => this.props.navigation.navigate("CatalogList")}>
                 <Icon style={{color: "white"}} name="layers" size={15}/>
               </TouchableOpacity>
             </View>
-            <CameraWrapper />
+            <CameraWrapper navfunc={this.props.navigation.navigate}/>
           </View>
         );
     }

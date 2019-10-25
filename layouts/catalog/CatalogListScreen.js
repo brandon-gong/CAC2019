@@ -151,6 +151,12 @@ class CatalogItem extends React.Component {
 
 class CatalogListScreen extends React.Component {
 
+    expandType = {
+        "g" : "nitrogenous",
+        "b" : "carbonaceous",
+        "n" : "non-compostable"
+    }
+
     constructor(props) {
         super(props);
         this.fData = [];
@@ -162,9 +168,22 @@ class CatalogListScreen extends React.Component {
         for(let [section, elements] of Object.entries(_tempDict)) {
           this.fData.push({title: section, data: elements});
         }
+        if(this.props.navigation.getParam("focus", false)) {
+            this.state = {showFocusedCard: true};
+        } else {
+            this.state = {showFocusedCard: false};
+        }
     }
 
     render() {
+        let _focusedAttrs;
+        if(this.state.showFocusedCard) {
+            for(let d of data) {
+                if(d.name === this.props.navigation.getParam("focus", false)) {
+                    _focusedAttrs = [d.name, d.type, d.tips];
+                }
+            }
+        }
         return (
             <View style={this.styles.container}>
                 <View style={{
@@ -180,7 +199,47 @@ class CatalogListScreen extends React.Component {
                     </TouchableOpacity>
                     <Text style={this.styles.header}>Catalog</Text>
                 </View>
-                <SectionList
+                {this.state.showFocusedCard
+                    ? (<View style={{padding: 20}}>
+                    <View style={{flexDirection: "row", alignItems: "center", marginBottom: 15}}>
+                        <View style={{
+                            height: 30,
+                            width: 30,
+                            borderRadius: 15,
+                            alignItems: "center",
+                            justifyContent: "center",
+                            backgroundColor: (_focusedAttrs[1] === 'g')
+                                ? "#197f57"
+                                : (_focusedAttrs[1] === 'b')
+                                    ? "#e6ac00"
+                                    : "#ad0000"}}>
+                            <Text style={{color: "white", fontFamily: 'sans-bold'}}>{_focusedAttrs[1].toUpperCase()}</Text>
+                        </View>
+                        <Text style={{fontFamily: GlobalData.getInstance()._pFontFamily, flex: 1, paddingLeft: 15, fontSize: 17}}>
+                            {((_focusedAttrs[0].substr(-1) === "s") ? _focusedAttrs[0] + " are " : _focusedAttrs[0] + " is ")}
+                            <Text style={{fontFamily: 'sans-bold'}}>{this.expandType[_focusedAttrs[1]]}</Text>.
+                        </Text>
+                    </View>
+                    <Text style={{fontFamily: GlobalData.getInstance()._pFontFamily, fontSize: 15}}>
+                        {(_focusedAttrs[1] === "g")
+                            ? "Items that are nitrogenous (containing nitrogen) tend to be wet and green, and decompose more quickly. Examples include fruit scraps and grass clippings."
+                            : (_focusedAttrs[1] === "b")
+                                ? "Items that are carbonaceous (containing carbon) tend to be dry and brown, and take much longer to decompose. Examples include leaves, straw, and paper."
+                                : "Non-compostable items should not be composted because they may be harmful to you or your composting mix."
+                        }
+                        {"\n\n"}
+                        The recommended mix of B & G components in a compost pile
+                        is about 4:1 browns to greens. Still, adjust your pile based
+                        on your items. If your compost pile is not heating up,
+                        then you may need to add more greens to the compost. If your compost
+                        pile is starting to smell, you may need to add more browns.
+                        {(_focusedAttrs[2] !== null) && "\n\nExtra tip: " + _focusedAttrs[2]}
+                    </Text>
+                    <TouchableOpacity style={{backgroundColor: GlobalData.getInstance()._fgAccentColor, padding: 5, margin: 30, alignItems: "center", borderRadius: 20}} onPress={() => this.setState({showFocusedCard: false})}>
+                        <Text style={{color: "white", fontSize: 15, fontFamily: GlobalData.getInstance()._pFontFamily}}>Browse full catalog list</Text>
+                    </TouchableOpacity>
+                </View>)
+                    : <SectionList
                     sections={this.fData}
                     keyExtractor={(item, index) => item + index}
                     renderItem={({ item }) => <CatalogItem attrs={item}/>}
@@ -188,11 +247,12 @@ class CatalogListScreen extends React.Component {
                         <View style={{backgroundColor: "white", paddingTop: 40, paddingLeft: 20, paddingBottom: 10, borderBottomColor: "#eee", borderBottomWidth: 1}}>
                             <Text style={{fontSize: 35, fontFamily: GlobalData.getInstance()._h1FontFamily}}>{title}</Text>
                         </View>
-                    )}
-                />
+                    )}/>
+                }
             </View>
         );
     }
+
     styles = StyleSheet.create({
       container: {
         flex: 1,
@@ -213,7 +273,7 @@ class CatalogListScreen extends React.Component {
 }
 
 CatalogListScreen.navigationOptions = {
-  title: 'About Us',
+  title: 'Catalog List',
   header: null
 };
 

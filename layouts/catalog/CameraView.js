@@ -6,11 +6,15 @@ import {
   Dimensions,
   StyleSheet,
   Platform,
+  TouchableWithoutFeedback
 } from 'react-native';
 import * as Permissions from 'expo-permissions';
 import { Camera } from 'expo-camera';
 import { Feather as Icon } from '@expo/vector-icons';
-import GlobalData from '../../data/GlobalData'
+import GlobalData from '../../data/GlobalData';
+import dataL from '../../assets/data.json';
+import Fuse from 'fuse.js';
+import ConfigStorage from '../../data/ConfigStorage';
 
 const fetch = require("node-fetch");
 
@@ -22,8 +26,12 @@ export default class CameraView extends React.Component {
     ratio: "16:9",
     width: Math.round(Dimensions.get('window').width),
     height: Math.round(Dimensions.get('window').width * 1.77778),
-    showThing: false,
+    // showThing === 0 : NOSHOW
+    // showThing === 1 : THINK
+    // showThing === 2 : ENUMRESULTS
+    showThing: 2,
   };
+  imgSearchResults = ["asdf", "ghjkl", "qwert", "yuiop", "zxcv"];
 
   async componentDidMount() {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
@@ -75,7 +83,22 @@ export default class CameraView extends React.Component {
                 <Icon style={{color: GlobalData.getInstance()._fgAccentColor}} name="refresh-cw" size={15}/>
             </TouchableOpacity>
           </View>
-          {this.state.showThing && <View style={{width: 100, height: 100, backgroundColor: "white", marginTop: -0.5*(Dimensions.get('window').height)}}></View>}
+          {this.state.showThing === 1 && 
+            (<View style={{
+                position: "absolute",
+                width: 250,
+                height: 150,
+                backgroundColor: "white",
+                borderRadius: 15,
+                padding: 15,
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: 0.5*(Dimensions.get('window').height - 150),
+                marginLeft: 0.5*(Dimensions.get('window').width - 250),
+              }}>
+                <Icon style={{color: GlobalData.getInstance()._fgAccentColor}} name="eye" size={28}/>
+                <Text style={{fontFamily: 'sans-xlight', fontSize: 20, marginTop: 8}}>Thinking...</Text>
+            </View>)}
         </View>
       );
     }
@@ -103,9 +126,9 @@ export default class CameraView extends React.Component {
 
   snap = async () => {
     if (this.camera) {
-      this.setState({showThing: true});
+      this.setState({showThing: 1});
       console.log("here");
-      let photo = await this.camera.takePictureAsync({base64: true});
+      let photo = await this.camera.takePictureAsync({base64: true, quality: 0});
       let opts = {
         "requests":[
             {
@@ -128,17 +151,55 @@ export default class CameraView extends React.Component {
           return response.json();
       }, (error) => {
         console.log(error);
-        this.setState({showThing: false});
+        this.setState({showThing: 0});
       }).then((data) => {
-          let candidates = data.responses[0].labelAnnotations.filter((annotation) => annotation.score > 0.80);
-          let reccs = [];
-          for(let i = 0; i < Math.min(candidates.length, 5); i++) {
-            reccs.push({name: candidates[i].description});
-          }
+          let options = {
+            shouldSort: true,
+            threshold: 0.3,
+            distance: 0,    
+            keys: [{
+                name: 'name',
+                weight: 0.7
+            }, {
+                name: 'keywords',
+                weight: 0.3
+            }]  //end keys weight
+            }; //end options 
+        let fuse = new Fuse(dataL, options);
+        let fullList = data.responses[0].labelAnnotations.filter((annotation) => annotation.score > 0.80);
+        let reccs = [];
+        let filterReccs = [];
           
-          console.log(JSON.stringify(candidates, null, 2));
-          console.log(JSON.stringify(data));
-          this.setState({showThing: false});
+        for(let i = 0; i < Math.min(fullList.length, 5); i++) {
+          reccs.push({name : fullList[i].description});
+          filterReccs.push((JSON.stringify(reccs[i].name)).replace('"', ''))    
+          }
+
+      let weights = {}
+      for(let j = 0; j < filterReccs.length; j++){
+          let tmp = (filterReccs[j].replace('"',''))
+          let value = tmp
+          unverResult = fuse.search(value)
+
+          for(let g=0; g< Math.min(unverResult.length, 5); g++){
+            {
+              let tmp2 = JSON.stringify(unverResult[g].name)
+              if (weights[tmp2] === undefined){
+                weights[tmp2] = (6-g)/6
+              }
+              else{
+                weights[tmp2] = weights[tmp2] + (6-g)/6
+              }
+            }             
+          }
+      }
+
+      let x = Object.keys(weights).sort((a, b) => weights[b] - weights[a]).slice(0, 5);
+      for(let i = 0; i < x.length; i++) {
+        x[i] = x[i].substr(1, x[i].length - 2);
+      }
+      ConfigStorage.getInstance().setNumScans(ConfigStorage.getInstance().getNumScans() + 1);
+      this.props.navfunc("VisionResults", {items: x});
       });
     }
   };
