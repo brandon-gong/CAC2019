@@ -12,11 +12,8 @@ import { StackActions } from 'react-navigation';
 import Constants from 'expo-constants';
 import { Feather as Icon } from '@expo/vector-icons';
 
-function Separator() {
-  return <View style={styles.separator} />;
-}
 
-class HomeScreen extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <ScrollView>
@@ -26,21 +23,21 @@ class HomeScreen extends React.Component {
         <View style={{fontFamily: "serif", fontSize: 60, margin: 40}}> 
         <Text>Welcome</Text>setName(Name)! 
         </View>
-         <Separator />
-          <View style={{fontFamily: "serif", fontSize: 40, margin: 20}}> 
+        <View style={{fontFamily: "serif", fontSize: 40, margin: 20}}> 
         <Text>Number of Scans: 5</Text>
         </View>
         <View style={styles.container}>
           <View style={styles.myButton}>
           title="go to Catalog"
-          onPress={null}
-          />
+          onPress={null}>
+          </View>
         </View>
       </ScrollView>
 
     );
   }
 }
+
 
 
 const styles = StyleSheet.create({
@@ -57,5 +54,6 @@ const styles = StyleSheet.create({
     borderRadius:100, 
     backgroundColor:'rgb(230, 172, 0)',
 
+  }
 
-export default HomeScreen;
+export default App;
