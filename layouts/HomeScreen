@@ -1,0 +1,61 @@
+import React from 'react';
+import {
+    ScrollView,
+    StyleSheet,
+    Text,
+    View,
+    TouchableOpacity,
+    Image,
+    Dimensions
+} from 'react-native';
+import { StackActions } from 'react-navigation';
+import Constants from 'expo-constants';
+import { Feather as Icon } from '@expo/vector-icons';
+
+function Separator() {
+  return <View style={styles.separator} />;
+}
+
+class HomeScreen extends React.Component {
+  render() {
+    return (
+      <ScrollView>
+        <View style={{fontFamily: "serif", fontSize: 40, margin: 20}}> 
+        <Text>Home</Text>
+        </View>
+        <View style={{fontFamily: "serif", fontSize: 60, margin: 40}}> 
+        <Text>Welcome</Text>setName(Name)! 
+        </View>
+         <Separator />
+          <View style={{fontFamily: "serif", fontSize: 40, margin: 20}}> 
+        <Text>Number of Scans: 5</Text>
+        </View>
+        <View style={styles.container}>
+          <View style={styles.myButton}>
+          title="go to Catalog"
+          onPress={null}
+          />
+        </View>
+      </ScrollView>
+
+    );
+  }
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  myButton:{
+    padding: 5,
+    height: 50,
+    width: 50,  
+    borderRadius:100, 
+    backgroundColor:'rgb(230, 172, 0)',
+
+
+export default HomeScreen;
