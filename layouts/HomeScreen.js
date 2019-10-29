@@ -22,73 +22,50 @@ import React from 'react';
 import {
     ScrollView,
     StyleSheet,
-    Text
+    Text,
+    View,
+    TouchableOpacity
 } from 'react-native';
 import Constants from 'expo-constants';
 import GlobalData from '../data/GlobalData';
-import ConfigStorage from '../data/ConfigStorage';
+import { Feather as Icon } from '@expo/vector-icons';
 
 class HomeScreen extends React.Component {
 
     render() {
         return (
             <ScrollView style={this.styles.container}>
-                <Text style={this.styles.header}>Home Layout & Content Here</Text>
+                <Text style={this.styles.header}>Good Afternoon!</Text>
                 <Text style={this.styles.bodyText}>
-                    This is a font text.
-                    Header font is {GlobalData.getInstance()._h1FontFamily};
-                    body font is {GlobalData.getInstance()._pFontFamily}.
-                    Tab bar font is {GlobalData.getInstance()._tabFontFamily}.
-                    NumScans is {ConfigStorage.getInstance().getNumScans()}.
-                    {"\n\n"}
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Tellus at urna condimentum mattis pellentesque id nibh. Est
-                    pellentesque elit ullamcorper dignissim. Nec tincidunt praesent
-                    semper feugiat nibh sed pulvinar proin gravida. Sem viverra
-                    aliquet eget sit. Nibh praesent tristique magna sit amet. Sed
-                    odio morbi quis commodo odio aenean sed. Non enim praesent
-                    elementum facilisis leo vel fringilla est. Eget felis eget nunc
-                    lobortis mattis. Neque aliquam vestibulum morbi blandit.
-                    {"\n\n"}
-                    Volutpat maecenas volutpat blandit aliquam etiam erat velit.
-                    Est lorem ipsum dolor sit. Mi quis hendrerit dolor magna eget.
-                    Interdum posuere lorem ipsum dolor. Facilisis gravida neque
-                    convallis a cras semper. Sit amet consectetur adipiscing elit
-                    pellentesque habitant morbi tristique. Suspendisse faucibus
-                    interdum posuere lorem ipsum dolor sit amet consectetur. Mus
-                    mauris vitae ultricies leo integer malesuada nunc vel. Gravida
-                    rutrum quisque non tellus orci ac auctor augue mauris.
-                    Scelerisque varius morbi enim nunc faucibus a pellentesque sit.
-                    Gravida arcu ac tortor dignissim. Tristique et egestas quis
-                    ipsum suspendisse ultrices gravida dictum.
-                    {"\n\n"}
-                    Fermentum et sollicitudin ac orci phasellus egestas tellus.
-                    Dignissim convallis aenean et tortor at risus viverra. Velit
-                    euismod in pellentesque massa placerat duis ultricies. Nunc
-                    lobortis mattis aliquam faucibus. Nisl suscipit adipiscing
-                    bibendum est. Nulla aliquet porttitor lacus luctus accumsan
-                    tortor posuere ac ut. Aliquam etiam erat velit scelerisque in
-                    dictum non. Est lorem ipsum dolor sit. Facilisi cras fermentum
-                    odio eu feugiat. Quisque id diam vel quam elementum. Tellus
-                    integer feugiat scelerisque varius morbi enim. At erat
-                    pellentesque adipiscing commodo elit at. Ultrices in iaculis
-                    nunc sed augue lacus. Purus in massa tempor nec feugiat nisl
-                    pretium fusce id. Lobortis elementum nibh tellus molestie nunc
-                    non blandit. Massa eget egestas purus viverra accumsan in nisl
-                    nisi. Leo urna molestie at elementum eu facilisis sed odio.
-                    {"\n\n"}
-                    Lacus laoreet non curabitur gravida arcu. Nisi scelerisque eu
-                    ultrices vitae auctor. A erat nam at lectus urna duis convallis.
-                    In aliquam sem fringilla ut morbi tincidunt augue. Malesuada
-                    fames ac turpis egestas. Turpis massa sed elementum tempus
-                    egestas sed. Tellus orci ac auctor augue mauris. Tristique risus
-                    nec feugiat in fermentum posuere. Ut consequat semper viverra
-                    nam libero justo. Tempor orci eu lobortis elementum nibh.
-                    Ultrices neque ornare aenean euismod elementum nisi. Erat
-                    imperdiet sed euismod nisi porta lorem. Eu non diam phasellus
-                    vestibulum lorem sed risus ultricies.
+                    Welcome to CRIS.
                 </Text>
+                <Text style={{fontFamily: 'sans-bold', fontSize: 30}}>Your Stats</Text>
+                <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
+                    <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
+                        <Text style={{color: GlobalData.getInstance()._fgAccentColor, fontSize: 50, fontFamily: 'sans-xlight'}}>67</Text>
+                        <Text style={{marginTop: 8, color: "#ddd", fontFamily: 'sans-bold', fontSize: 15}}>YOUR SCANS</Text>
+                    </View>
+                    <View><Text style={{fontSize: 100, fontFamily: 'sans-xlight', color: "#ddd"}}>/</Text></View>
+                    <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
+                        <Text style={{color: GlobalData.getInstance()._fgAccentColor, fontSize: 50, fontFamily: 'sans-xlight'}}>75</Text>
+                        <Text style={{marginTop: 8, color: "#ddd", fontFamily: 'sans-bold', fontSize: 15}}>YOUR NEXT GOAL</Text>
+                    </View>
+                </View>
+                <Text style={{fontFamily: 'sans-bold', fontSize: 30, marginTop: 40}}>Get Started</Text>
+                <View style={{flexDirection: "row", justifyContent: "space-between", marginTop: 30}}>
+                    <TouchableOpacity style={{flex: 1}} onPress={() => this.props.navigation.navigate("Articles")}>
+                        <View style={{backgroundColor: GlobalData.getInstance()._fgAccentColor, height: 180, marginRight: 4, flex: 1, borderRadius: 10, alignItems: "center", justifyContent: "center"}}>
+                            <Icon name="file-text" size={50} style={{color: "white"}}/>
+                            <Text style={{color: "white", marginTop: 10, fontFamily: 'sans-regular', fontSize: 15}}>Browse Articles</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={{flex: 1}} onPress={() => this.props.navigation.navigate("Catalog")}>
+                        <View style={{backgroundColor: GlobalData.getInstance()._fgAccentColor, height: 180, flex: 1, marginLeft: 4, borderRadius: 10, alignItems: "center", justifyContent: "center"}}>
+                            <Icon name="camera" size={50} style={{color: "white"}}/>
+                            <Text style={{color: "white", marginTop: 10, fontFamily: 'sans-regular', fontSize: 15}}>Quick Scan</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
             </ScrollView>
         );
     }
@@ -102,13 +79,13 @@ class HomeScreen extends React.Component {
       },
       header: {
           fontFamily: GlobalData.getInstance()._h1FontFamily,
-          fontSize: 40,
+          fontSize: 50,
       },
       bodyText: {
           fontFamily: GlobalData.getInstance()._pFontFamily,
-          fontSize: 17,
-          marginTop: 20,
-          marginBottom: 70, // IMPORTANT otherwise content gets obscured
+          fontSize: 25,
+          marginTop: 10,
+          marginBottom: 40, // IMPORTANT otherwise content gets obscured
       }
     });
 }

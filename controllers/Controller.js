@@ -19,7 +19,6 @@
  * SOFTWARE.
  */
 import React from 'react';
-import { Platform } from 'react-native';
 import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 import { Feather as Icon } from '@expo/vector-icons';
 
@@ -148,10 +147,10 @@ SettingsStack.navigationOptions = {
 /////////////////////////////////////////
 const coreComponent = createBottomTabNavigator(
     {
-        HomeStack,
-        ArticlesStack,
-        CatalogStack,
-        SettingsStack
+        Home: HomeStack,
+        Articles: ArticlesStack,
+        Catalog: CatalogStack,
+        Settings: SettingsStack
     },
     {
         lazy: GlobalData.getInstance()._lazyRendering,

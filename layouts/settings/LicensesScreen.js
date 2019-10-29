@@ -128,8 +128,30 @@ class LicensesScreen extends React.Component {
                         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
                         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
                         SOFTWARE.
+                        {"\n\n"}
                     </Text>
-                    <View style={{height: 70}}></View>
+                    <Text style={this.styles.bodyText}>Image tagging functionality provided by </Text>
+                    <View style={{height: 40}}></View>
+                    <Text style={{...this.styles.header, marginLeft: 20, marginBottom: 20}}>Catalog Resources</Text>
+                    <Text style={{
+          fontFamily: GlobalData.getInstance()._pFontFamily,
+          fontSize: 17,
+          marginLeft: 20,
+          marginRight: 20,
+          marginBottom: 50
+      }}>
+                        https://www.independent.co.uk/environment/crabs-thames-plastic-synthetic-fibres-pollution-a9155031.html
+                        {"\n"}
+                        https://modernfarmer.com/2017/02/how-to-compost/
+                        {"\n"}
+                        https://www.bhg.com/gardening/yard/compost/diy-indoor-compost-bin/
+                        {"\n"}
+                        https://www.popsci.com/human-composting-greener-way-to-die/
+                        {"\n"}
+                        http://www.saferbrand.com/articles/recipes-make-great-compost
+                        {"\n"}
+                        https://www.smallfootprintfamily.com/100-things-you-can-compost
+                    </Text>
             </ScrollView>
         );
     }

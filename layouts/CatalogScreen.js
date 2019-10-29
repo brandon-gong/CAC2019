@@ -35,18 +35,32 @@ import Fuse from "fuse.js"
 
 import data from "../assets/data.json"
 
+
+/**
+ * UI for the catalog screen.
+ * Text search happens here, and the UI flexibly displays anywhere from 0-5 items
+ * in a custom-built dropdown when the search bar is focused.
+ * 
+ * @author Abhishek Menothu, Brandon Gong
+ * @date 10-16-19
+ */
 class CatalogScreen extends React.Component {
 
+  /*
+   * `text` is query string entered into search bar, `reccs` is top recommendations,
+   * and `barIsFocused` is true when the search bar is focused and the dropdown should be
+   * rendered.
+   */
   state = {
     text: "",
     reccs: [],
     barIsFocused: false,
   }
 
+  /** Options for fuse. @see https://fusejs.io/ */
   options = {
     shouldSort: true,
     threshold: 0.3,
-    
     keys: [{
       name: 'name',
       weight: 0.7
@@ -60,66 +74,72 @@ class CatalogScreen extends React.Component {
     super(props);
   }
   
+  /**
+   * Render the catalog ui.
+   * This includes the search bar at the top and the catalog quick access button to the right.
+   * Also loads the camera wrapper.
+   */
+  render() {
+      let x;
 
-    render() {
-        let x;
-        if(this.state.reccs.length === 0) {
-          x = (
-            <View style={{backgroundColor:"white", zIndex: 2, marginTop: -24, borderBottomLeftRadius: 24, borderBottomRightRadius: 24, padding: 15, paddingLeft: 20}}>
-              <View style={{height: 14}}></View>
-              <Text style={{fontFamily: 'sans-light-italic'}}>No results found.</Text>
-            </View>
-          );
-        } else {
-          x = (
-            <View style={{backgroundColor:"white", zIndex: 2, marginTop: -24, borderBottomLeftRadius: 24, borderBottomRightRadius: 24}}>
-              <View style={{height: 24}}></View>
+      // Don't just display an empty dropdown if no results
+      if(this.state.reccs.length === 0) {
+        x = (
+          <View style={this.styles.noResultsFound}>
+            <View style={{height: 14}}></View>
+            <Text style={{fontFamily: 'sans-light-italic'}}>No results found.</Text>
+          </View>
+        );
+      } else {
+        x = (
+          <View style={this.styles.searchResultContainer}>
+            <View style={{height: 24}}></View>
               {this.state.reccs.map((result) => {
                 return (
-                  <TouchableOpacity key={result.name} style={this.styles.searchResultTouchable} onPress={() => this.props.navigation.navigate("CatalogList", {focus: result.name})}>
+                  <TouchableOpacity
+                    key={result.name}
+                    style={this.styles.searchResultTouchable}
+                    onPress={() => this.props.navigation.navigate("CatalogList", {focus: result.name})}>
                     <Text style={{fontFamily: GlobalData.getInstance()._pFontFamily}}>{result.name}</Text>
                   </TouchableOpacity>
                 );
-                })
-              }
-            </View>
-          );
-        }
-        
-        return (
-          <View style={{flex: 1}}>
-            <View style={this.styles.searchContainer}>
-              <View style={{flex: 1, flexDirection: "column"}}>
-                <TextInput 
-                  style={this.styles.searchBar}
-                  placeholder="Search..."
-                  value={this.state.text}
-                  onChangeText={this.handleInput}
-                  onFocus={() => this.setState({barIsFocused: true})}
-                  onBlur={() => this.setState({barIsFocused: false})}/>
-                {this.state.barIsFocused && x}
-              </View>
-              <TouchableOpacity style={this.styles.catalogButton} onPress={() => this.props.navigation.navigate("CatalogList")}>
-                <Icon style={{color: "white"}} name="layers" size={15}/>
-              </TouchableOpacity>
-            </View>
-            <CameraWrapper navfunc={this.props.navigation.navigate}/>
+              })}
           </View>
         );
+      }
+      
+      // render.
+      return (
+        <View style={{flex: 1}}>
+          <View style={this.styles.searchContainer}>
+            <View style={{flex: 1, flexDirection: "column"}}>
+              <TextInput 
+                style={this.styles.searchBar}
+                placeholder="Search..."
+                value={this.state.text}
+                onChangeText={this.handleInput}
+                onFocus={() => this.setState({barIsFocused: true})}
+                onBlur={() => this.setState({barIsFocused: false})}/>
+              {this.state.barIsFocused && x}
+            </View>
+            <TouchableOpacity
+              style={this.styles.catalogButton}
+              onPress={() => this.props.navigation.navigate("CatalogList")}>
+              <Icon style={{color: "white"}} name="layers" size={15}/>
+            </TouchableOpacity>
+          </View>
+          <CameraWrapper navfunc={this.props.navigation.navigate}/>
+        </View>
+      );
     }
 
+    // On user input, change state.  TODO: is `text` state necessary?
     handleInput = (e) => {
       this.setState({text: e});
       this.setState({reccs: new Fuse(data, this.options).search(e).slice(0,5)});
-      // let fuse = new Fuse(data, this.options);
-      // let results = fuse.search(e);
-      // let suggestions = [];
-      // for (let i = 0; i < Math.min(results.length, 5); i++) {
-      //   suggestions.push(JSON.stringify(results[i].name));
-      // }
-      // console.log("suggestions are = " + suggestions)
     }
 
+    // Styles for JSX
     styles = StyleSheet.create({
       searchContainer: {
         paddingTop: Constants.statusBarHeight + 8,
@@ -162,6 +182,22 @@ class CatalogScreen extends React.Component {
         height: 43,
         fontSize: 15,
         justifyContent: "center",
+        borderBottomLeftRadius: 24,
+        borderBottomRightRadius: 24
+      },
+      noResultsFound: {
+        backgroundColor:"white",
+        zIndex: 2,
+        marginTop: -24,
+        borderBottomLeftRadius: 24,
+        borderBottomRightRadius: 24,
+        padding: 15,
+        paddingLeft: 20
+      },
+      searchResultContainer: {
+        backgroundColor:"white",
+        zIndex: 2,
+        marginTop: -24,
         borderBottomLeftRadius: 24,
         borderBottomRightRadius: 24
       }

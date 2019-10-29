@@ -126,7 +126,6 @@ class SettingsScreen extends React.Component {
                                 ],
                                 {cancelable: false},
                             )
-
                         }}
                         style={{alignItems:"center", flex: 1, flexDirection: "row-reverse"}}>
                         <Text style={{
@@ -149,7 +148,7 @@ class SettingsScreen extends React.Component {
                 <TouchableOpacity onPress={() => this.props.navigation.navigate("Licenses")}>
                     <View style={this.styles.listElement}>
                         <Icon name="package" size={20} style={this.styles.leftIcons}/>
-                        <Text style={this.styles.listElementText}>3rd-Party Libraries</Text>
+                        <Text style={this.styles.listElementText}>3rd-Party Sources</Text>
                         <Icon name="chevrons-right" size={20} style={{paddingRight: 8, flex: 1, textAlign: "right", marginRight: -5}}/>
                     </View>
                 </TouchableOpacity>

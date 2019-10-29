@@ -24,8 +24,6 @@ import * as Font from 'expo-font';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import * as FileSystem from 'expo-file-system';
-import { Alert } from 'react-native';
 
 import ControlEntry from './controllers/ControlEntry';
 import ConfigStorage from './data/ConfigStorage'
