@@ -180,6 +180,8 @@ export default class CameraView extends React.Component {
     if (this.camera) {
       this.setState({showThinking: 1});
       let photo = await this.camera.takePictureAsync({base64: true, quality: 0});
+
+      /** @see https://cloud.google.com/vision/docs/request */
       let opts = {
         "requests":[
             {
@@ -201,6 +203,7 @@ export default class CameraView extends React.Component {
       }).then((response) => {
           return response.json();
       }, (error) => {
+        // Handle errors gracefully
         console.log(error);
         this.setState({showThinking: 0});
       }).then((data) => {
@@ -218,45 +221,56 @@ export default class CameraView extends React.Component {
               weight: 0.3
           }]  //end keys weight
         }; //end options 
+
         let fuse = new Fuse(dataL, options);
         let fullList = data.responses[0].labelAnnotations.filter((annotation) => annotation.score > 0.80);
         let reccs = [];
         let filterReccs = [];
-          
+        
+        // Parse out top recommendations
         for(let i = 0; i < Math.min(fullList.length, 5); i++) {
           reccs.push({name : fullList[i].description});
           filterReccs.push((JSON.stringify(reccs[i].name)).replace('"', ''))    
           }
 
+      // Need to searh our data term-by-term and keep a running weighted total
+      // of the most relevant search results.
       let weights = {}
-      for(let j = 0; j < filterReccs.length; j++){
+      for(let j = 0; j < filterReccs.length; j++) {
           let tmp = (filterReccs[j].replace('"',''))
           let value = tmp
           unverResult = fuse.search(value)
 
-          for(let g=0; g< Math.min(unverResult.length, 5); g++){
-            {
+          // Iterate through fuse results;
+          // The lower down fuse recommends it, the less relevant it is,
+          // so the less weight we assign it
+          for(let g = 0; g < Math.min(unverResult.length, 5); g++) {
               let tmp2 = JSON.stringify(unverResult[g].name)
               if (weights[tmp2] === undefined){
                 weights[tmp2] = (6-g)/6
               }
-              else{
+              else {
                 weights[tmp2] = weights[tmp2] + (6-g)/6
               }
-            }             
           }
       }
 
+      // Sort the list in order of relevance based on weighted totals
       let x = Object.keys(weights).sort((a, b) => weights[b] - weights[a]).slice(0, 5);
       for(let i = 0; i < x.length; i++) {
         x[i] = x[i].substr(1, x[i].length - 2);
       }
+
+      // update numScans for HomeScreen
       ConfigStorage.getInstance().setNumScans(ConfigStorage.getInstance().getNumScans() + 1);
+
+      // Load results screen
       this.props.navfunc("VisionResults", {items: x});
       });
     }
   };
 
+  // Styles for JSX
   styles = StyleSheet.create({
     buttonContainer: {
       flexDirection: "row",
