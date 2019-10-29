@@ -180,7 +180,7 @@ export default class CameraView extends React.Component {
     if (this.camera) {
       this.setState({showThinking: 1});
       let photo = await this.camera.takePictureAsync({base64: true, quality: 0});
-
+      console.log("Please add in your own api key below")
       /** @see https://cloud.google.com/vision/docs/request */
       let opts = {
         "requests":[
@@ -197,7 +197,7 @@ export default class CameraView extends React.Component {
             }
         ]
       }
-      fetch('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAr3tUJjFH9fXUfu7yA_o2KRWYRcfjC8Nk', {
+      fetch('https://vision.googleapis.com/v1/images:annotate?key=INSERT_API_KEY_HERE', {
           method: 'post',
           body: JSON.stringify(opts)
       }).then((response) => {
