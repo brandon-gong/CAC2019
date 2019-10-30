@@ -1,4 +1,4 @@
-<img src="cris_icon.png" align="left" height=150 />
+<img src="images/cris_icon.png" align="left" height=150 />
 
 # CRIS
 
@@ -11,3 +11,13 @@ Google Cloud APIs.  The API key has since been removed from the source code and 
 
 CRIS was created by Brandon Gong, Abhishek Menothu, and Sruti Gandreti as a submission in the 2019 Congressional App Challenge,
 Tennessee Congressional District 8 (TN-08).  It is open-source under the MIT License.
+
+# Screenshots
+
+<img src="images/1.jpeg" />
+<img src="images/2.png" />
+<img src="images/3.jpeg" />
+<img src="images/4.PNG" />
+<img src="images/5.PNG" />
+<img src="images/6.PNG" />
+
